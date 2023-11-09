@@ -1,0 +1,131 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    
+}
+
+.barra-navegacion{
+    background-color: #3d5eea;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.barra-navegacion ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3d5eea;
+    position:static;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+
+li {
+    float: left;
+}
+
+.boton-derecho {
+    float:right;
+}
+
+.barra-navegacion  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 19px 25px;
+    text-decoration: none;
+}
+
+.barra-navegacion li a:hover:not(.active) {
+    background-color: #ffcf4e;
+    color: black;
+}
+
+ .logo {
+    width: 6.3cm;
+    height: 1.5cm;
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.encabezado{
+    display: inline-block;
+    width: 100%;
+    background: linear-gradient(150deg ,#ffcf4e, #3d5eea  , #ea3dc7);
+    border: 0;
+    margin:0;
+    
+    text-align: center;
+}
+
+.buscador{
+    float:right;
+}
+
+.buscador input{
+    border-radius: 3px;
+}
+
+.preguntas-autores,
+.preguntas-patrocinadores
+{
+    display: flex;
+    float: center;
+}
+
+
+.preguntas-autores div,
+.preguntas-patrocinadores div,
+.preguntas-nosotros div{
+    width: 33%;
+    margin: 10px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+.preguntas-autores div h3, 
+.preguntas-patrocinadores div h3, 
+.preguntas-nosotros div h3{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.preguntas-nosotros{
+    transform: translateX(33%);
+}
+
+.autores div a, .patrocinadores a, .nosotros a{
+    text-decoration: none;
+    color: rgb(28, 125, 186);
+}
+
+
+.boton-contacto {
+    background-color: #ffb251; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s; 
+    float: right;
+}
+
+
+.boton-contacto:hover {
+    transform: scale(1.2); 
+}
+
+
