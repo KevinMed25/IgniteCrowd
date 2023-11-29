@@ -1,5 +1,4 @@
 <?php 
-
     class ActiveRecord {
 
         //Base de datos:
