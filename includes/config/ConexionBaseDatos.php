@@ -1,7 +1,7 @@
 <?php
 
 function conectarBaseDatos() : mysqli {
-    $baseDatos = new mysqli('localhost', 'root', '', 'ignitecrowd' , 3306);
+    $baseDatos = new mysqli('localhost', 'root', 'root', 'ignitecrowd' , 3306);
     $baseDatos->set_charset("utf8");
 
     if($baseDatos->connect_error) {
@@ -13,8 +13,8 @@ function conectarBaseDatos() : mysqli {
     return $baseDatos;  
 }
 
-$conexion = conectarBaseDatos();
+// $conexion = conectarBaseDatos();
 
-$conexion->close();  
+// $conexion->close();  
 
 ?>
