@@ -21,7 +21,7 @@
             </div>
               
             <div class="recordar-password">
-                ¿Ólvido su contraseña?
+                ¿Olvidó su contraseña?
             </div>
             <input type="submit" value="Iniciar">
             <div class="registrarse">
