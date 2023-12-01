@@ -1,0 +1,324 @@
+/* Configuraciones Globales */
+:root {
+    --naranja: #ffb251;
+    --amarillo: #ffcf4e;
+    --azulOscuro: #0023ae;
+    --azulClaro: #3d5eea;
+    --morado: #c2aeff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(150deg, var(--amarillo), var(--azulClaro),var(--azulOscuro));
+    height: 100vh;
+}
+
+/*
+
+    Estilos para la Página de Inicio de Sesión 
+    
+*/
+
+.formulario-iniciar-sesion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.formulario-iniciar-sesion h1 {
+    text-align: center;
+    color: #ffffff;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.formulario-iniciar-sesion form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .nombre-usuario, .contrasenia {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.nombre-usuario input, .contrasenia input {
+    width: 100%;
+    padding: 0 5px;
+    height:  40px;
+    font-size: 16px;
+    background: none;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+}
+
+.nombre-usuario label, .contrasenia label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color:#c0c0c0;
+    transform: translateY(-150%);
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.nombre-usuario input:focus + label,
+.contrasenia input:focus + label {
+    transform: translateY(-150%);
+    font-size: 12px;
+    color: transparent;
+    transition: transform 0.2s, font-size 0.2s, color 0.2s;
+}
+
+.recordar-contrasenia {
+    text-decoration: underline;
+    color: #ffffff;
+    margin: 20px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(150deg , #000a35, #272500 );
+    border-radius: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.registrarse {
+    margin: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.registrarse a {
+    color:#00ffff;
+    text-decoration: none;
+}
+
+.registrarse a:hover {
+    text-decoration: underline;
+}
+
+/*
+
+    Estilos para la Página de Registro 
+    
+*/
+
+.formulario-registro {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.formulario-registro form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.formulario-registro h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.formulario-registro .nombre-usuario, 
+.primer-apellido, .segundo-apellido, 
+.correo-usuario, .contrasenia-usuario, 
+.confirmar-contrasenia {
+    margin: 20px;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+}
+
+.nombre-usuario input, 
+.primer-apellido input, 
+.segundo-apellido input,
+.correo-usuario input, 
+.contrasenia-usuario input,
+.confirmar-contrasenia input {
+    width: 100%;
+    padding: 0 5px;
+    height:  40px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+
+.nombre-usuario label, 
+.primer-apellido label, 
+.segundo-apellido label, 
+.correo-usuario label, 
+.contrasenia-usuario label, 
+.confirmar-contrasenia label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color:#c0c0c0;
+    transform: translateY(-150%);
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.nombre-usuario input:focus + label,
+.primer-apellido input:focus + label,
+.segundo-apellido input:focus + label,
+.correo-usuario input:focus + label,
+.contrasenia-usuario input:focus + label,
+.confirmar-contrasenia input:focus + label {
+    transform: translateY(-150%);
+    font-size: 12px;
+    color: transparent;
+    transition: transform 0.2s, font-size 0.2s, color 0.2s;
+}
+
+.aceptar-terminos {
+    margin: 30px;
+    text-align: center;
+}
+
+.iniciar-sesion {
+    margin: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.iniciar-sesion a {
+    color:#00ffff;
+    text-decoration: none;
+}
+
+.iniciar-sesion a:hover {
+    text-decoration: underline;
+}
+
+/*
+
+    Estilos para la Página de Ayuda 
+    
+*/
+
+.formulario-ayuda {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.formulario-ayuda form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.formulario-ayuda h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.formulario-ayuda .nombre, 
+.asunto, .correo, .descripcion {
+    margin: 20px;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+}
+
+.nombre input, 
+.asunto input, 
+.correo input, 
+.descripcion input {
+    width: 100%;
+    padding: 0 5px;
+    height:  40px;
+    font-size: 16px;
+    background: none;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+}
+
+.nombre label, 
+.asunto label,  
+.correo label, 
+.descripcion label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color:#c0c0c0;
+    transform: translateY(-150%);
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.nombre input:focus + label,
+.asunto input:focus + label,
+.correo input:focus + label,
+.descripcion input:focus + label {
+  transform: translateY(-150%);
+  font-size: 12px;
+  color: transparent;
+  transition: transform 0.2s, font-size 0.2s, color 0.2s;
+}
+
+.descripcion textarea {
+    resize: both; 
+    width: 300px; 
+    height: 150px; 
+    padding: 5px; 
+    background:#ffffff;
+    margin-top: 35px;
+}
+
+.descrip {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color:#c0c0c0;
+    transform: translateY(-150%);
+    pointer-events: none;
+    font-size: 16px;
+    margin-left: 60px;
+}
+
+.cerrar {
+    margin: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.cerrar a {
+    color:#00ffff;
+    text-decoration: none;
+}
+
+.cerrar a:hover {
+    text-decoration: underline;
+}
