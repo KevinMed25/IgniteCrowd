@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalógo</title>
-    <link rel="stylesheet" href="./css/catalogo.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header class="header">
         <ul class="navegacion">
             <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
-            <li><a class="enlace" href="#">Empieza tu proyecto</a></li>
+            <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
             <li>
                 <a href="./index.html">
                     <div class="logo-container">
@@ -18,12 +18,12 @@
                     </div>
                 </a>
             </li>
-            <li><a  class="enlace" href="#">Registrarse</a></li>
-            <li><a  class="enlace" href="#">Iniciar sesión</a></li>
+            <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
+            <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
         </ul>
         <div class="panel"> 
             <div class="sobre-nosotros">
-                <h1>Ayuda a cumplir suños!</h1>
+                <h1>Ayuda a cumplir sueños!</h1>
             </div>
         </div>
         <div class="filtro-barra">
@@ -57,7 +57,7 @@
           </div>          
     </header>
     <main class="catalogo">
-        <div class="contenedor">
+        <div class="contenedor-catalogo">
             <article class="card">
                 <div class="imagen">
                     <img src="./img/proyectos/InfernoSmall.jpg">
@@ -152,9 +152,9 @@
         <a class="boton" href="./catalogo.html">Ver más Proyectos</a>
     </main>
     <footer class="footer">
-        <h2>Conócenos</h2>
-        <a href="#" class="botones-footer">Preguntas frecuentes</a>
-        <a href="#" class="botones-footer">Ayuda para autores</a>
+        <h2>IgniteCrowd</h2>
+        <a href="PreguntasFrecuentes.html" class="botones-footer">Preguntas frecuentes</a>
+        <a href="AyudaAutores.html" class="botones-footer">Ayuda para autores</a>
         <div class="boton-cookies">
             <a href="#" class="botones-footer">Cookies</a>
         </div>

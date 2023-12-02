@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayuda</title>
-    <link rel="stylesheet" type="text/css" href="estilosAyuda.css">
+    <link rel="stylesheet" type="text/css" href="estilosFormularios.css">
 </head>
 <body>
     <body>
-        <div class="formularioAyuda">
+        <div class="formulario-ayuda">
             <h1>¿Necesitas ayuda?</h1>
             <form method="post">
 
-                <div class="nombreUsuario">
-                    <input type="text" required>
+                <div class="nombre">
+                    <input type="text" id="nombreUsuario" required>
                     <label for="nombreUsuario">Nombre</label>
                 </div>
 
                 <div class="asunto">
-                    <input type="text" required>
+                    <input type="text" id="asunto" required>
                     <label for="asunto">Asunto</label>
                 </div>
         
-                <div class="correoUsuario">
-                    <input type="text" required>
+                <div class="correo">
+                    <input type="text" id="correoUsuario" required>
                     <label for="correoUsuario">Correo</label>
                 </div>
                 
-                <label for="descripcion" class="desc">¿En qué podemos ayudarte?</label>
+                <label for="descripcion" class="descrip">¿En qué podemos ayudarte?</label>
                 <div class="descripcion">
                     <textarea type="text" required id="descripcion" name="descripcion"></textarea>
                 </div>

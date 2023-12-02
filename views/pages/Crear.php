@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear</title>
-    <link rel="stylesheet" href="crear.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <ul class="navBar">
-        <li class="boton-izquierdo"><a href="catalogo.html">Explorar</a></li>
-        <li class="logo-container">
-            <a href="index.html">
-                <div>Ignite<span>Crowd</span></div>
+    <ul class="navegacion">
+        <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
+        <li></li>
+        <li>
+            <a href="./index.html">
+                <div class="logo-container">
+                    Ignite<span>Crowd</span>
+                </div>
             </a>
         </li>
-        <li class="boton-derecho"><a href="Registro.html">Registrarse</a></li>
-        <li class="boton-derecho"><a href="IniciarSesion.html">Iniciar sesión</a></li>
+        <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
+        <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
     </ul>
-    <div class="contenedor">
+    <div class="contenedor-crear">
         <div class="titulo">
             <h1>Cuéntanos tu proyecto</h1>
         </div>
@@ -27,7 +30,7 @@
                 <h1>Tu proyecto</h1>
                 <h2>Datos</h2>
             </div>
-            <div class="formulario">
+            <div class="formulario-crear">
                 <form>
                     <div class="text"><label for="proyecto">Nombre del proyecto</label></div>
                     <div class="caja"><input type="text" id="proyecto" placeholder="Escribe..."></div>
@@ -43,19 +46,17 @@
     
                     <div class="text"><label for="recompensas">Recompensas</label></div>
                     <div class="caja"><textarea placeholder="¿Qué recompensas tendremos?.."></textarea></div>
+                    <div class="botones-confirmar">
+                            <a href="#"><input class="boton-crear" type="submit" value="Cancelar"></a>
+                            <a href="#"><input class="boton-crear" type="submit" value="Confirmar"></a>
+                    </div>
                 </form>
-            </div>
-            <div class="botones-confirmar">
-                <div class="boton">
-                    <a href="#"><input type="submit" value="Cancelar"></a>
-                </div>
-                <div class="boton"><a href="#"><input type="submit" value="Confirmar"></a></div>
             </div>
         </div>
     </div>
 
     <footer class="footer">
-        <h2>Conócenos</h2>
+        <h2>IgniteCrowd</h2>
         <a href="PreguntasFrecuentes.html" class="botones-footer">Preguntas frecuentes</a>
         <a href="AyudaAutores.html" class="botones-footer">Ayuda para autores</a>
         <div class="boton-cookies">

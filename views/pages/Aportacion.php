@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aportación</title>
-    <link rel="stylesheet" href="aportacion.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <ul class="navBar">
-        <li class="boton-izquierdo"><a href="catalogo.html">Explorar</a></li>
-        <li class="boton-izquierdo"><a href="crear.html">Empieza tu proyecto</a></li>
-        <li class="logo-container">
-            <a href="index.html">
-                <div>Ignite<span>Crowd</span></div>
+    <ul class="navegacion">
+        <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
+        <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
+        <li>
+            <a href="./index.html">
+                <div class="logo-container">
+                    Ignite<span>Crowd</span>
+                </div>
             </a>
         </li>
-        <li class="boton-derecho"><a href="Registro.html">Registrarse</a></li>
-        <li class="boton-derecho"><a href="IniciarSesion.html">Iniciar sesión</a></li>
+        <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
+        <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
     </ul>
     
-    <div class="contenedor">
+    <div class="contenedor-aportacion">
         <div class="pago">
-            <div class="titulo"><h1>Aportación</h1></div>
+            <div class="titulo">
+                <h2>Aportación</h2>
+            </div>
             <h3 class="subtitulo">Método de pago</h3>
             <div class="informacion">
                 <form class="checkbox">
@@ -30,7 +34,6 @@
                     <input type="radio" id="paypal" name="metodo-pago" value="Paypal">
                     <label for="paypal">Paypal</label>
                 </form> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis nisl quam. Sed id ultricies nunc.</p>
             </div>
             <div class="boton-confirmar">
                 <a href="#">
@@ -43,8 +46,8 @@
             <div class="nombre">
                 <h2>Nombre del proyecto seleccionado</h2>
             </div>
-            <div class="imagen" alt="imagen-proyecto">
-                <img src="gato.jfif" class="imagen-proyecto">
+            <div class="contenedor-imagen" alt="imagen-proyecto">
+                <img src="./img/gato.jfif" class="imagen-proyecto">
             </div>
             <div class="descripcion">
                 <h3>Descripción</h3>
@@ -63,7 +66,7 @@
         </div>
     </div>
     <footer class="footer">
-        <h2>Conócenos</h2>
+        <h2>IgniteCrowd</h2>
         <a href="PreguntasFrecuentes.html" class="botones-footer">Preguntas frecuentes</a>
         <a href="AyudaAutores.html" class="botones-footer">Ayuda para autores</a>
         <div class="boton-cookies">

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descripciones</title>
-    <link rel="stylesheet" href="./css/descripcion.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header-descripcion">
         <ul class="navegacion">
             <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
-            <li><a class="enlace" href="#">Empieza tu proyecto</a></li>
+            <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
             <li>
                 <a href="./index.html">
                     <div class="logo-container">
@@ -18,15 +18,15 @@
                     </div>
                 </a>
             </li>
-            <li><a  class="enlace" href="#">Registrarse</a></li>
-            <li><a  class="enlace" href="#">Iniciar sesión</a></li>
+            <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
+            <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
         </ul>
     </header>
     <main class="catalogo">
-        <h1 class="titulo">Titulo del Proyecto</h1>
+        <h1 class="titulo-descripcion">Titulo del Proyecto</h1>
 
-        <div class="contenedor">
-            <div class="descripcion">
+        <div class="contenedor-descripcion">
+            <div class="texto-descripcion">
                 <p>
                     Aquí irá una breve descripcion general del proyecto
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus saepe quisquam laborum possimus, expedita molestiae quos quia aliquam sed consectetur quidem, repellendus natus blanditiis iusto nesciunt amet, aut cumque?
@@ -36,7 +36,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus saepe quisquam laborum possimus, expedita molestiae quos quia aliquam sed consectetur quidem, repellendus natus blanditiis iusto nesciunt amet, aut cumque?
                 </p>
             </div>
-            <article class="card">
+            <article class="card-descripcion">
                 <div class="imagen">
                     <img src="./img/proyectos/InfernoSmall.jpg">
                 </div>
@@ -72,9 +72,9 @@
         <!-- <a class="boton" href="./catalogo.html">Ver más Proyectos</a> -->
     </main>
     <footer class="footer">
-        <h2>Conócenos</h2>
-        <a href="#" class="botones-footer">Preguntas frecuentes</a>
-        <a href="#" class="botones-footer">Ayuda para autores</a>
+        <h2>IgniteCrowd</h2>
+        <a href="PreguntasFrecuentes.html" class="botones-footer">Preguntas frecuentes</a>
+        <a href="AyudaAutores.html" class="botones-footer">Ayuda para autores</a>
         <div class="boton-cookies">
             <a href="#" class="botones-footer">Cookies</a>
         </div>

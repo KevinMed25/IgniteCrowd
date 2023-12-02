@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayuda para autores</title>
-    <link href="estilosAutores.css" rel="stylesheet" type="text/css">
+    <link href="estilos.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <ul class="navBar">
-        <li><a href="#">Explorar</a></li>
-        <li><a href="#">Empieza tu proyecto</a></li>
-        <li class="logo-container"><img src="imgs\logo.png" class="logo"></li>
-        <li class="boton-derecho"><a href="#">Registrarse</a></li>
-        <li class="boton-derecho"><a href="#">Iniciar sesión</a></li>
+    <ul class="navegacion">
+        <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
+        <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
+        <li>
+            <a href="./index.html">
+                <div class="logo-container">
+                    Ignite<span>Crowd</span>
+                </div>
+            </a>
+        </li>
+        <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
+        <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
     </ul>
 
     <nav class="lateral">
@@ -78,20 +84,16 @@
                 Cuando hayas terminado podrás publicarla y comenzar la aventura de un nuevo proyecto.
             </div>
         </div>
-        <div><button href="#" class="boton">Contáctanos</button></div>
     </div>
 </body>
 
 <footer class="footer">
-
-      <p>Conócenos</p>
-      <a href="#">
-        <button class="boton-footer">Preguntas frecuentes</button>
-      </a>
-
-      <a href="#">
-        <button class="boton-footer boton-cookies">Cookies</button> 
-      </a> 
-
+    <h2>IgniteCrowd</h2>
+    <a href="PreguntasFrecuentes.html" class="botones-footer">Preguntas frecuentes</a>
+    <a href="AyudaAutores.html" class="botones-footer">Ayuda para autores</a>
+    <div class="boton-cookies">
+        <a href="#" class="botones-footer">Cookies</a>
+    </div>
 </footer>
+
 </html>
