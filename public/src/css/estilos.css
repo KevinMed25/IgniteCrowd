@@ -32,15 +32,6 @@ body {
 }
 
 /* Estilos para el header */
-.header {
-    width: 100%;
-    height: 70rem;
-    background-image: url(../img/creativo2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-}
-
 .navegacion {
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
@@ -88,13 +79,19 @@ body {
 .panel {
     padding: 10rem;
     color:#fff;
+    width: 100%;
+    height: 70rem;
+    background-image: url(../img/creativo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom; 
 }
 
 .sobre-nosotros {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5rem;
     border-radius: 1rem;
 }
 

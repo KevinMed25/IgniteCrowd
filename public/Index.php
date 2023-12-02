@@ -10,6 +10,8 @@
 
     //publicas
     $router->get('/', [ControladorPaginas::class, 'index']);
+    $router->get('/Catalogo', [ControladorPaginas::class, 'catalogo']);
+
 
     $router->comprobarRutas();
 ?>

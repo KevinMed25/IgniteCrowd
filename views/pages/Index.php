@@ -7,27 +7,12 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="header">
-        <ul class="navegacion">
-            <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
-            <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
-            <li>
-                <a href="./index.html">
-                    <div class="logo-container">
-                        Ignite<span>Crowd</span>
-                    </div>
-                </a>
-            </li>
-            <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
-            <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
-        </ul>
-        <div class="panel"> 
-            <div class="sobre-nosotros">
-                <h1 class="fondo">¿Quienes somos?</h1>
-                <p class="fondo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur corrupti ducimus illo saepe voluptates ut mollitia pariatur nesciunt veritatis nemo. Ipsa minus, aperiam eius nihil deserunt amet tempore id laboriosam?</p>
-            </div>
+    <div class="panel"> 
+        <div class="sobre-nosotros">
+            <h1 class="fondo">¿Quienes somos?</h1>
+            <p class="fondo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur corrupti ducimus illo saepe voluptates ut mollitia pariatur nesciunt veritatis nemo. Ipsa minus, aperiam eius nihil deserunt amet tempore id laboriosam?</p>
         </div>
-    </header>
+    </div>
     <main class="catalogo">
         <h1 class="titulo">Apoya ideas innovadoras!</h1>
         <div class="contenedor">
@@ -70,13 +55,5 @@
         </div>
         <a class="boton" href="./catalogo.html">Ver más Proyectos</a>
     </main>
-    <footer class="footer">
-        <h2>IgniteCrowd</h2>
-        <a href="PreguntasFrecuentes.html" class="botones-footer">Preguntas frecuentes</a>
-        <a href="AyudaAutores.html" class="botones-footer">Ayuda para autores</a>
-        <div class="boton-cookies">
-            <a href="#" class="botones-footer">Cookies</a>
-        </div>
-    </footer>
 </body>
 </html>

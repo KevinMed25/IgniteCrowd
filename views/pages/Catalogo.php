@@ -7,20 +7,7 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="header">
-        <ul class="navegacion">
-            <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
-            <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
-            <li>
-                <a href="./index.html">
-                    <div class="logo-container">
-                        Ignite<span>Crowd</span>
-                    </div>
-                </a>
-            </li>
-            <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
-            <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
-        </ul>
+    <div>
         <div class="panel"> 
             <div class="sobre-nosotros">
                 <h1>Ayuda a cumplir sueños!</h1>
@@ -34,7 +21,7 @@
                     <option class="opcion"  value="categoria1">Categoría 1</option>
                     <option class="opcion"  value="categoria2">Categoría 2</option>
                     <option class="opcion"  value="categoria3">Categoría 3</option>
-                  </select>
+                </select>
             </div>
             <div class="selector">
                 <p>Seleccionar Idioma:</p>
@@ -43,7 +30,7 @@
                     <option value="idioma1">Idioma 1</option>
                     <option value="idioma2">Idioma 2</option>
                     <option value="idioma3">Idioma 3</option>
-                  </select>
+                </select>
             </div>
             <div class="selector">
                 <p>Seleccionar Ciudad:</p>
@@ -52,10 +39,10 @@
                     <option value="ciudad1">Ciudad 1</option>
                     <option value="ciudad2">Ciudad 2</option>
                     <option value="ciudad3">Ciudad 3</option>
-                  </select>
-            </div>
-          </div>          
-    </header>
+                </select>
+            </div>  
+        </div>        
+    </div>
     <main class="catalogo">
         <div class="contenedor-catalogo">
             <article class="card">
@@ -151,13 +138,5 @@
         </div>
         <a class="boton" href="./catalogo.html">Ver más Proyectos</a>
     </main>
-    <footer class="footer">
-        <h2>IgniteCrowd</h2>
-        <a href="PreguntasFrecuentes.html" class="botones-footer">Preguntas frecuentes</a>
-        <a href="AyudaAutores.html" class="botones-footer">Ayuda para autores</a>
-        <div class="boton-cookies">
-            <a href="#" class="botones-footer">Cookies</a>
-        </div>
-    </footer>
 </body>
 </html>
