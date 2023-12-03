@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Model\Ingresos;
 use Model\Proyecto;
 use MVC\Router;
 
@@ -9,8 +10,10 @@ class ControladorPaginas {
 
     public static function index(Router  $router) {
         $proyectos = Proyecto::get(3);
+        $ingresos = Ingresos::get(3);
         $router -> render('pages/Index', [
             'proyectos' => $proyectos,
+            'ingresos' => $ingresos,
         ]);
     }
 

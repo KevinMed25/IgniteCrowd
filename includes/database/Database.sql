@@ -36,6 +36,16 @@ CREATE TABLE `ingresos` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `ingresos`
+--
+
+LOCK TABLES `ingresos` WRITE;
+/*!40000 ALTER TABLE `ingresos` DISABLE KEYS */;
+INSERT INTO `ingresos` VALUES (1,1,1,149.00),(2,1,2,300.00),(3,1,3,365.00);
+/*!40000 ALTER TABLE `ingresos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `proyectos`
 --
 
@@ -57,6 +67,16 @@ CREATE TABLE `proyectos` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `proyectos`
+--
+
+LOCK TABLES `proyectos` WRITE;
+/*!40000 ALTER TABLE `proyectos` DISABLE KEYS */;
+INSERT INTO `proyectos` VALUES (1,'Infierno',' Aquí irá una breve descripcion general del proyecto',700.00,'InfernoSmall.jpg',NULL,'Libros','Mérida, Yucatán','2023-12-02'),(2,'Electro Albúm',' Aquí irá una breve descripcion general del proyecto',800.00,'AlumMusica.jpeg',NULL,'Música','Mérida, Yucatán','2023-12-02'),(3,'Tokyo Ghoul',' Aquí irá una breve descripcion general del proyecto',400.00,'portadaManga.jpg',NULL,'Mangas','Mérida, Yucatán','2023-12-02');
+/*!40000 ALTER TABLE `proyectos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `usuarios`
 --
 
@@ -66,7 +86,8 @@ DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `idusuarios` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Apellidos` varchar(80) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `apellido_paterno` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `apellido_materno` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telefono` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -74,6 +95,16 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`idusuarios`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'Kevin','Medina Padilla',NULL,'25092001','kevinmedina2509Jr@gmail.com','9996131871',0);
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -84,4 +115,4 @@ CREATE TABLE `usuarios` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-03  1:31:22
+-- Dump completed on 2023-12-03  1:47:41

@@ -4,7 +4,7 @@ namespace Model;
 
 class Proyecto extends ActiveRecord {
     protected static $tabla = 'proyectos';
-    protected static $columnasDB =['idproyectos','nombre_proyecto','descripcion', 'portada', 'img_descripcion', 'fecha_creacion'];
+    protected static $columnasDB =['idproyectos','nombre_proyecto','descripcion', 'total_a_financiar', 'portada', 'img_descripcion', 'categoria', 'ciudad', 'fecha_creacion'];
 
     public $idproyectos;
     public $nombre_proyecto;
@@ -29,6 +29,8 @@ class Proyecto extends ActiveRecord {
         $this->total_a_financiar = $args['total_a_financiar'] ?? 0;
         $this->portada = $args['portada'] ?? '';
         $this->img_descripcion = $args['img_descripcion'] ?? '';
+        $this->categoria = $args['categoria'] ?? '';
+        $this->ciudad = $args['ciudad'] ?? '';
         $this->fecha_creacion = $args['fecha_creacion'] ?? '';
 
     }
@@ -40,11 +42,11 @@ class Proyecto extends ActiveRecord {
     public function validar() {
                 
         if(!$this->nombre_proyecto) {
-            self::$errores[] = "Debes de añadir un nombre para el proyecto.";
+            self::$errores[] = "Debes de añadir un nombre para el proyecto";
         }
 
         if((!$this->descripcion) && (strlen($this->descripcion) < 50)) {
-            self::$errores[] = "Debes añadir una descripción y debe teener al menos 50 caracteres";
+            self::$errores[] = "Debes añadir una descripción y debe tener al menos 50 caracteres";
         }  
 
         if(!$this->portada) {
@@ -52,7 +54,7 @@ class Proyecto extends ActiveRecord {
         }
 
         if(!$this->img_descripcion) {
-            self::$errores[] = "La imagen de la descripción es obligatoria ";
+            self::$errores[] = "La imagen de la descripción es obligatoria";
         }
 
         return self::$errores;
