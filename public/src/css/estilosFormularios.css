@@ -15,6 +15,113 @@ body {
     height: 100vh;
 }
 
+/* Estilos para el header */
+.navegacion {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 2rem;
+    list-style: none; 
+    margin: 0;
+}
+
+.navegacion li {
+    margin: 0 1rem;
+}
+
+.navegacion a {
+    text-decoration: none;
+}
+
+.navegacion .enlace {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.navegacion .enlace:hover {
+    transform: scale(1.04);
+    color: var(--azulClaro);
+}
+
+.logo-container {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--azulClaro);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.logo-container span {
+    color:#fff;
+    font-weight: normal;
+}
+
+.panel {
+    padding: 10rem;
+    color:#fff;
+    width: 100%;
+    height: 70rem;
+    background-image: url(../img/creativo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom; 
+}
+
+.sobre-nosotros {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.sobre-nosotros h1 {
+    font-size: 8rem;
+    margin: 0;
+}
+
+.sobre-nosotros p {
+    font-size: 3rem;
+}
+
+/* Estilos para el footer */
+
+.footer {
+    background: linear-gradient(to bottom, #292929, #0e0e0e );
+    width: 100%;
+    height: 30rem;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer h2 {
+    font-size: 3.5rem;
+    margin: 3rem 0 3rem 1rem;
+}
+
+.boton-cookies {
+    display: flex;
+    justify-content: right;
+}
+
+.botones-footer {
+    border-radius: 0.5rem;
+    border: none;
+    color:#ffffff;
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.botones-footer:hover {
+    cursor: pointer;
+    background-color:#ffffff13;
+}
+
 /*
 
     Estilos para la Página de Inicio de Sesión 
