@@ -4,10 +4,10 @@ namespace Model;
 
 class Ingresos extends ActiveRecord {
     protected static $tabla = 'ingresos';
-    protected static $columnasDB =['idingresos','idusuarios','idproyectos','ingresos'];
+    protected static $columnasDB =['id','idusuario','idproyectos','ingresos'];
 
-    public $idingresos;
-    public $idusuarios;
+    public $id;
+    public $idusuario;
     public $idproyectos;
     public $ingresos;
 
@@ -17,8 +17,8 @@ class Ingresos extends ActiveRecord {
     
     function __construct($args = []) {
         
-        $this->idingresos = $args['idingresos'] ?? null;  
-        $this->idusuarios = $args['idusuarios'] ?? null;
+        $this->id = $args['id'] ?? null;  
+        $this->idusuario = $args['idusuario'] ?? null;
         $this->idproyectos = $args['idproyectos'] ?? null;
         $this->ingresos = $args['ingresos'] ?? '';
 

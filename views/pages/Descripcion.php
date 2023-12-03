@@ -1,48 +1,41 @@
 <main class="catalogo">
-    <h1 class="titulo-descripcion">Titulo del Proyecto</h1>
+    <h1 class="titulo-descripcion"><?php echo $proyecto->nombre_proyecto; ?></h1>
 
     <div class="contenedor-descripcion">
         <div class="texto-descripcion">
-            <p>
-                Aquí irá una breve descripcion general del proyecto
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus saepe quisquam laborum possimus, expedita molestiae quos quia aliquam sed consectetur quidem, repellendus natus blanditiis iusto nesciunt amet, aut cumque?
-            </p>
-            <p>
-                Aquí irá una breve descripcion general del proyecto
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus saepe quisquam laborum possimus, expedita molestiae quos quia aliquam sed consectetur quidem, repellendus natus blanditiis iusto nesciunt amet, aut cumque?
-            </p>
+            <?php echo $proyecto->descripcion; ?>
         </div>
         <article class="card-descripcion">
             <div class="imagen">
-                <img src="./img/proyectos/InfernoSmall.jpg">
+                <img src="/images/<?php echo $proyecto->portada; ?>">
             </div>
             <div class="info-proyecto">
-                <h2>Infierno</h2>
-                <p><span class="backers">200 </span><br>Backers</p>
-                <p><span class="cifra">300$</span><br>De $700</p>
+                <h2><?php echo $proyecto->nombre_proyecto; ?></h2>
+                <p><span class="backers"><?php echo $proyecto->num_backers; ?> </span><br>Backers</p>
+                <p><span class="cifra"><?php echo $ingresos->ingresos; ?> </span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
             </div>
         </article>
     </div>
     <div class="barra-informacion">
         <div class="info">
             <h2>Autor:</h2>
-            <p>Julanito De la Santa Cruz Narvaes</p>
+            <p class="backers"><?php echo $usuario->nombre; ?></p>
         </div>
         <div class="info">
             <h2>Categoría:</h2>
-            <p>Libro</p>
+            <p class="backers"><?php echo $proyecto->categoria; ?></p>
         </div>
         <div class="info">
             <h2>Creado en:</h2>
-            <p><span class="backers">200 </span><br>Backers</p>
+            <p><span class="backers"><?php echo $proyecto->ciudad; ?></p>
         </div>
         <div class="info">
             <h2>Aportaciones:</h2>
-            <p><span class="backers">200 </span><br>Backers</p>
+            <p><span class="backers"><?php echo $proyecto->num_backers; ?></p>
         </div>
         <div class="info">
             <h2>Cantidad recaudada:</h2>
-            <p><span class="cifra">300$</span><br>De $700</p>
+            <p><span class="backers">$<?php echo $ingresos->ingresos; ?></span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
         </div>
     </div>
     <!-- <a class="boton" href="./catalogo.html">Ver más Proyectos</a> -->

@@ -23,15 +23,15 @@ DROP TABLE IF EXISTS `ingresos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ingresos` (
-  `idingresos` int NOT NULL,
+  `id` int NOT NULL,
   `idusuario` int NOT NULL,
   `idproyectos` int NOT NULL,
   `ingresos` decimal(10,2) DEFAULT NULL,
-  PRIMARY KEY (`idingresos`),
+  PRIMARY KEY (`id`),
   KEY `idusuario` (`idusuario`) /*!80000 INVISIBLE */,
   KEY `idproyectos_idx` (`idproyectos`),
-  CONSTRAINT `idproyectos` FOREIGN KEY (`idproyectos`) REFERENCES `proyectos` (`idproyectos`),
-  CONSTRAINT `idusuario` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`idusuario`)
+  CONSTRAINT `idproyectos` FOREIGN KEY (`idproyectos`) REFERENCES `proyectos` (`id`),
+  CONSTRAINT `idusuario` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -53,16 +53,17 @@ DROP TABLE IF EXISTS `proyectos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `proyectos` (
-  `idproyectos` int NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nombre_proyecto` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `descripcion` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `total_a_financiar` decimal(10,2) DEFAULT NULL,
+  `num_backers` int DEFAULT NULL,
   `portada` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `img_descripcion` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `categoria` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ciudad` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fecha_creacion` date DEFAULT NULL,
-  PRIMARY KEY (`idproyectos`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -72,7 +73,7 @@ CREATE TABLE `proyectos` (
 
 LOCK TABLES `proyectos` WRITE;
 /*!40000 ALTER TABLE `proyectos` DISABLE KEYS */;
-INSERT INTO `proyectos` VALUES (1,'Infierno',' Aquí irá una breve descripcion general del proyecto',700.00,'InfernoSmall.jpg',NULL,'Libros','Mérida, Yucatán','2023-12-02'),(2,'Electro Albúm',' Aquí irá una breve descripcion general del proyecto',800.00,'AlumMusica.jpeg',NULL,'Música','Mérida, Yucatán','2023-12-02'),(3,'Tokyo Ghoul',' Aquí irá una breve descripcion general del proyecto',400.00,'portadaManga.jpg',NULL,'Mangas','Mérida, Yucatán','2023-12-02');
+INSERT INTO `proyectos` VALUES (1,'Infierno',' Aquí irá una breve descripcion general del proyecto',700.00,169,'InfernoSmall.jpg',NULL,'Libros','Mérida, Yucatán','2023-12-02'),(2,'Electro Albúm',' Aquí irá una breve descripcion general del proyecto',800.00,400,'AlumMusica.jpeg',NULL,'Música','Mérida, Yucatán','2023-12-02'),(3,'Tokyo Ghoul',' Aquí irá una breve descripcion general del proyecto',400.00,320,'portadaManga.jpg',NULL,'Mangas','Mérida, Yucatán','2023-12-02');
 /*!40000 ALTER TABLE `proyectos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,7 +85,7 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
-  `idusuario` int NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `apellido_paterno` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `apellido_materno` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -92,7 +93,7 @@ CREATE TABLE `usuarios` (
   `email` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telefono` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `crowdfunder` tinyint DEFAULT NULL,
-  PRIMARY KEY (`idusuario`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -115,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-03  2:00:12
+-- Dump completed on 2023-12-03 13:40:36

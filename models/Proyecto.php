@@ -4,9 +4,9 @@ namespace Model;
 
 class Proyecto extends ActiveRecord {
     protected static $tabla = 'proyectos';
-    protected static $columnasDB =['idproyectos','nombre_proyecto','descripcion', 'total_a_financiar','num_backers', 'portada', 'img_descripcion', 'categoria', 'ciudad', 'fecha_creacion'];
+    protected static $columnasDB =['id','nombre_proyecto','descripcion', 'total_a_financiar','num_backers', 'portada', 'img_descripcion', 'categoria', 'ciudad', 'fecha_creacion'];
 
-    public $idproyectos;
+    public $id;
     public $nombre_proyecto;
     public $descripcion;
     public $total_a_financiar;
@@ -24,7 +24,7 @@ class Proyecto extends ActiveRecord {
 
     function __construct($args = []) {
         
-        $this->idproyectos = $args['idproyectos'] ?? null;
+        $this->id = $args['id'] ?? null;
         $this->nombre_proyecto = $args['nombre_proyecto'] ?? '';
         $this->descripcion = $args['descripcion'] ?? '';
         $this->total_a_financiar = $args['total_a_financiar'] ?? 0;

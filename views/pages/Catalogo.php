@@ -42,14 +42,14 @@
             // Buscar ingreso correspondiente
             $ingresoCorrespondiente;
             foreach ($ingresos as $ingreso) {
-                if ($ingreso->idproyectos == $proyecto->idproyectos) {
+                if ($ingreso->idproyectos == $proyecto->id) {
                     $ingresoCorrespondiente = $ingreso;
                     break;
                 }
             }
             ?>
 
-            <a href="/proyecto?id=<?php echo $proyecto->idproyectos; ?>">
+            <a href="/Descripcion?id=<?php echo $ingresoCorrespondiente->id; ?>">
                 <article class="card">
                     <div class="imagen">
                         <img src="/images/<?php echo $proyecto->portada; ?>">

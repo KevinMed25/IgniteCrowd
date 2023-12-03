@@ -17,7 +17,7 @@
         </div>
         <input type="submit" value="Iniciar">
         <div class="registrarse">
-            ¿Aún no te haz registrado? <a href="Registro.html">Regístrate</a>
+            ¿Aún no te haz registrado? <a href="/Registro">Regístrate</a>
         </div>
     </form>
 </div>

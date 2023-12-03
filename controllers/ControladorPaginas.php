@@ -4,6 +4,7 @@ namespace Controllers;
 
 use Model\Ingresos;
 use Model\Proyecto;
+use Model\Usuario;
 use MVC\Router;
 
 class ControladorPaginas {
@@ -23,6 +24,21 @@ class ControladorPaginas {
         $router -> render('pages/Catalogo', [
             'proyectos' => $proyectos,
             'ingresos' => $ingresos,
+        ]);
+    }
+
+    public static function descripcion(Router $router) { 
+        $id = validarRedireccionar('/Descripcion');
+        $ingresos = Ingresos::find($id);
+        // debug($ingresos);
+        $proyecto = Proyecto::find($ingresos->idproyectos);
+        $usuario = Usuario::find($ingresos->idusuario);
+
+        $router->render('pages/Descripcion', [
+            'proyecto' => $proyecto,
+            'ingresos' => $ingresos,
+            'usuario' => $usuario,
+
         ]);
     }
     

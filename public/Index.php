@@ -11,6 +11,7 @@
     //publicas
     $router->get('/', [ControladorPaginas::class, 'index']);
     $router->get('/Catalogo', [ControladorPaginas::class, 'catalogo']);
+    $router->get('/Descripcion', [ControladorPaginas::class, 'descripcion']);
     $router->get('/CrearProyecto', [ControladorPaginas::class, 'crearProyecto']);
     $router->get('/PreguntasFrecuentes', [ControladorPaginas::class, 'preguntasFrecuentes']);
     $router->get('/AyudaAutores', [ControladorPaginas::class, 'ayudaAutores']);
