@@ -8,16 +8,15 @@ use MVC\Router;
 class ControladorPaginas {
 
     public static function index(Router  $router) {
-
-        $principal = true;
-
-        $router -> render('pages/Index', [
-            'principal' => $principal,
-        ]);
+        $router -> render('pages/Index', []);
     }
 
     public static function catalogo(Router  $router) {
         $router -> render('pages/Catalogo', []);
+    }
+    
+    public static function crearProyecto(Router $router) {
+        $router -> render('pages/CrearProyecto', []);
     }
 }
 

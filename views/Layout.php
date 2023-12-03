@@ -34,6 +34,7 @@
             <li><a  class="enlace" href="#">Iniciar sesión</a></li>
         </ul>
     </header>
+    
     <!-- Mostrar contenido de forma dinámica -->
     <?php echo $contenido ?>
 
