@@ -31,7 +31,7 @@ CREATE TABLE `ingresos` (
   KEY `idusuario` (`idusuario`) /*!80000 INVISIBLE */,
   KEY `idproyectos_idx` (`idproyectos`),
   CONSTRAINT `idproyectos` FOREIGN KEY (`idproyectos`) REFERENCES `proyectos` (`idproyectos`),
-  CONSTRAINT `idusuario` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`idusuarios`)
+  CONSTRAINT `idusuario` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`idusuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -84,7 +84,7 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
-  `idusuarios` int NOT NULL AUTO_INCREMENT,
+  `idusuario` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `apellido_paterno` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `apellido_materno` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -92,7 +92,7 @@ CREATE TABLE `usuarios` (
   `email` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telefono` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `crowdfunder` tinyint DEFAULT NULL,
-  PRIMARY KEY (`idusuarios`)
+  PRIMARY KEY (`idusuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -115,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-03  1:47:41
+-- Dump completed on 2023-12-03  2:00:12
