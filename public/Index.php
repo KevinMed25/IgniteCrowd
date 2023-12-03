@@ -20,8 +20,9 @@
 
     //Inicio de sesion
     $router->get('/IniciarSesion', [ControladorInicioSesion::class, 'iniciarSesion']);
+    $router->post('/IniciarSesion', [ControladorInicioSesion::class, 'iniciarSesion']);
+    $router->get('/CerrarSesion', [ControladorInicioSesion::class, 'cerrarSesion']);
     $router->get('/Registro', [ControladorInicioSesion::class, 'registro']);
-    
 
     $router->comprobarRutas();
 ?>

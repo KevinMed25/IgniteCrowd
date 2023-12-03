@@ -1,7 +1,9 @@
 <?php
+
 if (!isset($_SESSION)) {
     session_start(); //verfiicar si la session ya existia, si no, inicia
 }
+
 $auth = $_SESSION['login'] ?? false;
 
 if (!isset($isRegistro)) {
@@ -27,7 +29,11 @@ if (!isset($isRegistro)) {
     <header>
         <ul class="navegacion">
             <li><a href="/Catalogo" class="enlace">Explorar</a></li>
-            <li><a class="enlace" href="/CrearProyecto">Empieza tu proyecto</a></li>
+            <?php if ($auth) : ?>
+                <li><a class="enlace" href="/CrearProyecto">Empieza tu proyecto</a></li>
+            <?php else : ?>
+                <li><a class="enlace" href="/IniciarSesion">Empieza tu proyecto</a></li>
+            <?php endif; ?>
             <li class="logo-container">
                 <a href="/">
                     <div class="logo-container">
@@ -36,7 +42,11 @@ if (!isset($isRegistro)) {
                 </a>
             </li>
             <li><a class="enlace" href="/Registro">Registrarse</a></li>
-            <li><a class="enlace" href="/IniciarSesion">Iniciar sesión</a></li>
+            <?php if ($auth) : ?>
+                <li><a class="enlace" href="/CerrarSesion">Cerrar sesión</a></li>
+            <?php else : ?>
+                <li><a class="enlace" href="/IniciarSesion">Iniciar sesión</a></li>
+            <?php endif; ?>
         </ul>
     </header>
 

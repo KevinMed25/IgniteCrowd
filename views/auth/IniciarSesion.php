@@ -1,10 +1,21 @@
 <div class="contenedor">
 <div class="formulario-iniciar-sesion">
     <h1>Inicio de sesión</h1>
+
+    <?php foreach($errores as $error): ?>
+        <div class="alerta error">
+            <?php echo $error; ?>
+        </div>
+    <?php endforeach; ?>
+    <?php foreach($errores as $error): ?>
+        <div class="alerta error">
+            <?php echo $error; ?>
+        </div>
+    <?php endforeach; ?>
     <form method="post">
         <div class="nombre-usuario">
-            <input type="text" id="usuario" name="usuario" required>
-            <label for="username">Nombre de usuario</label>
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
         </div>
 
         <div class="contrasenia">
