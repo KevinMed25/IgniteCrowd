@@ -18,6 +18,7 @@ class ControladorPaginas {
     public static function crearProyecto(Router $router) {
         $router -> render('pages/CrearProyecto', []);
     }
+
 }
 
 ?>
