@@ -444,3 +444,42 @@ input[type="submit"]:hover {
 .cerrar a:hover {
     text-decoration: underline;
 }
+
+/* 
+    Media Queries
+*/
+
+@media (max-width: 768px) {
+    /* Estilos en el header */
+    .navegacion {
+        flex-direction: column;
+    }
+
+    .navegacion li {
+        margin-top: 0;
+        margin-bottom: 5rem;
+    }
+
+    li.logo-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0;
+        order: -1;
+    }
+
+    .logo-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilos Iniciar Sesión */
+    .formulario-iniciar-sesion {
+        width: 90%;
+    }
+
+    /* Estilos Registro */
+    .formulario-registro {
+        width: 90%;
+    }
+
+}
