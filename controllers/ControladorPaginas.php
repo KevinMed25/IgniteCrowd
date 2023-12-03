@@ -2,13 +2,16 @@
 
 namespace Controllers;
 
-use Model\Proyectos;
+use Model\Proyecto;
 use MVC\Router;
 
 class ControladorPaginas {
 
     public static function index(Router  $router) {
-        $router -> render('pages/Index', []);
+        $proyectos = Proyecto::get(3);
+        $router -> render('pages/Index', [
+            'proyectos' => $proyectos,
+        ]);
     }
 
     public static function catalogo(Router  $router) {

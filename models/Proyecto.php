@@ -2,15 +2,18 @@
 
 namespace Model;
 
-class Proyectos extends ActiveRecord {
+class Proyecto extends ActiveRecord {
     protected static $tabla = 'proyectos';
     protected static $columnasDB =['idproyectos','nombre_proyecto','descripcion', 'portada', 'img_descripcion', 'fecha_creacion'];
 
     public $idproyectos;
     public $nombre_proyecto;
     public $descripcion;
+    public $total_a_financiar;
     public $portada;
     public $img_descripcion;
+    public $categoria;
+    public $ciudad;
     public $fecha_creacion;
 
     
@@ -23,6 +26,7 @@ class Proyectos extends ActiveRecord {
         $this->idproyectos = $args['idproyectos'] ?? null;
         $this->nombre_proyecto = $args['nombre_proyecto'] ?? '';
         $this->descripcion = $args['descripcion'] ?? '';
+        $this->total_a_financiar = $args['total_a_financiar'] ?? 0;
         $this->portada = $args['portada'] ?? '';
         $this->img_descripcion = $args['img_descripcion'] ?? '';
         $this->fecha_creacion = $args['fecha_creacion'] ?? '';

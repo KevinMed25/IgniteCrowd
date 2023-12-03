@@ -7,42 +7,20 @@
 <main class="catalogo">
     <h1 class="titulo">Apoya ideas innovadoras!</h1>
     <div class="contenedor">
-        <a href="./Descipcion.html">
+    <?php foreach($proyectos as $proyecto): ?>
+        <a href="/proyecto?id=<?php echo $propiedad->idproyectos; ?>">
             <article class="card">
                 <div class="imagen">
-                    <img src="./img/proyectos/InfernoSmall.jpg">
+                    <img src="/images/<?php echo $proyecto->portada; ?>">
                 </div>
                 <div class="info-proyecto">
-                    <h2>Infierno</h2>
+                    <h2><?php echo $proyecto->nombre_proyecto; ?></h2>
                     <p><span class="backers">200 </span><br>Backers</p>
-                    <p><span class="cifra">300$</span><br>De $700</p>
+                    <p><span class="cifra">$300</span><br>De $<?php $proyecto->totalfinanciado; ?></p>
                 </div>
             </article>
         </a>
-        <a href="./Descipcion.html">
-            <article class="card">
-                <div class="imagen">
-                    <img src="./img/proyectos/AlumMusica.jpeg">
-                </div>
-                <div class="info-proyecto">
-                    <h2>Electro Albúm</h2>
-                    <p><span class="backers">356 </span><br>Backers</p>
-                    <p><span class="cifra">300$</span><br>De $700</p>
-                </div>
-            </article>
-        </a>
-        <a href="./Descipcion.html">
-            <article class="card">
-                <div class="imagen">
-                    <img src="./img/proyectos/portadaManga.jpg">
-                </div>
-                <div class="info-proyecto">
-                    <h2>Tokyo Ghoul</h2>
-                    <p><span class="backers"> </span><br>Backers</p>
-                    <p><span class="cifra">300$</span><br>De $700</p>
-                </div>
-            </article>
-        </a>
+    <?php endforeach; ?>
     </div>
     <a class="boton" href="/Catalogo">Ver más Proyectos</a>
 </main>
