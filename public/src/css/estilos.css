@@ -666,15 +666,17 @@ legend {
 }
 
 fieldset{
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-bottom: 4rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-bottom: 6rem;
     border-radius: 1rem;
-    border: 0.3rem solid var(--azulClaro);
+    border: 0.3rem solid #3d5deac5;
 }
+
 #descrip, #objetivo{
     height: 20rem;
 }
+
 .botones-confirmar {
     display: flex;
     justify-content: center;
@@ -707,4 +709,94 @@ input[type=tel], input[type=number], .categoria {
 input[type=text]:hover, textarea:hover, input[type=email]:hover, 
 input[type=tel]:hover, input[type=number]:hover{
     border: 0.2rem solid var(--azulClaro);
+}
+
+.formulario label {
+    font-weight: bold;
+    color: #555555;
+}
+
+.campos-img {
+    padding-top: 3rem;
+}
+
+/* 
+    Media Queries
+*/
+
+@media (max-width: 1050px) {
+    /* Estilos Index */
+    .panel {
+        padding: 6rem;
+    }
+    
+
+    .sobre-nosotros {
+        text-align: center;
+        height: auto;
+    }
+
+    .sobre-nosotros h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .sobre-nosotros p {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    /* Estilos en el header */
+    .navegacion{
+        flex-direction: column;
+    }
+
+    .navegacion li {
+        margin-top: 0;
+        margin-bottom: 5rem;
+    }
+
+    li.logo-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0;
+        order: -1;
+    }
+
+    .logo-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilos Index */
+
+    .contenedor{
+        grid-template-columns: auto;
+    }
+
+    .panel {
+        height: 50rem;
+    }
+
+    .sobre-nosotros h1 {
+        font-size: 4rem;
+    }
+    
+    .sobre-nosotros p {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .sobre-nosotros {
+        height: auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+
 }

@@ -23,6 +23,10 @@
                 <input type="text" id="segundoApellido" required>
                 <label for="segundoApellido">Segundo Apellido</label>
             </div>
+            <div class="tel-usuario">
+                <input type="tel" id="telUsuario" required>
+                <label for="telUsuario">Teléfono</label>
+            </div>
             <div class="correo-usuario">
                 <input type="text" id="correoUsuario" required>
                 <label for="correoUsuario">Correo</label>

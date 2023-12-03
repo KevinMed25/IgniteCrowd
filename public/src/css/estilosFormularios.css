@@ -265,8 +265,8 @@ input[type="submit"]:hover {
 
 .formulario-registro .nombre-usuario, 
 .primer-apellido, .segundo-apellido, 
-.correo-usuario, .contrasenia-usuario, 
-.confirmar-contrasenia {
+.tel-usuario, .correo-usuario, 
+.contrasenia-usuario, .confirmar-contrasenia {
     margin: 2rem;
     position: relative;
     border-bottom: 0.2rem solid #adadad;
@@ -275,6 +275,7 @@ input[type="submit"]:hover {
 .nombre-usuario input, 
 .primer-apellido input, 
 .segundo-apellido input,
+.tel-usuario input,
 .correo-usuario input, 
 .contrasenia-usuario input,
 .confirmar-contrasenia input {
@@ -292,6 +293,7 @@ input[type="submit"]:hover {
 .nombre-usuario label, 
 .primer-apellido label, 
 .segundo-apellido label, 
+.tel-usuario label,
 .correo-usuario label, 
 .contrasenia-usuario label, 
 .confirmar-contrasenia label {
@@ -307,6 +309,7 @@ input[type="submit"]:hover {
 .nombre-usuario input:focus + label,
 .primer-apellido input:focus + label,
 .segundo-apellido input:focus + label,
+.tel-usuario input:focus + label,
 .correo-usuario input:focus + label,
 .contrasenia-usuario input:focus + label,
 .confirmar-contrasenia input:focus + label {

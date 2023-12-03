@@ -7,14 +7,21 @@
         <fieldset>
             <legend>Información Personal</legend>
             <h2>Información básica</h2>
-            <label for="nombreUsuario">Nombre de usuario</label>
+            <label for="nombreUsuario">Nombre(s)</label>
             <input type="text" name="nombreUsuario" placeholder="Escribe tu nombre" id="usuario">
+
+            <label for="apellidoPaterno">Apellido Paterno</label>
+            <input type="text" name="apellidoPaterno" placeholder="Escribe..." id="primerApellido">
+
+            <label for="apellidoMaterno">Apellido Materno</label>
+            <input type="text" name="apellidoMaterno" placeholder="Escribe..." id="segundoApellido">
+
+            <label for="tel">Teléfono</label>
+            <input type="tel" placeholder="Escribe tu teléfono" id="tel">
 
             <label for="email">Email</label>
             <input type="email" placeholder="Escribe tu email" id="email">
 
-            <label for="tel">Teléfono</label>
-            <input type="tel" placeholder="Escribe tu teléfono" id="tel">
 
         </fieldset>
 
@@ -26,10 +33,10 @@
             <input type="text" id="proyecto" placeholder="Escribe...">
 
             <label for="decrip">Descripción</label>
-            <textarea placeholder="Escribe una descripción..." id="descrip"></textarea>
+            <textarea placeholder="Escribe..." id="descrip"></textarea>
 
             <label for="objetivo">Objetivo de financiación</label>
-            <textarea placeholder="Cuéntanos tus objetivos..." id="objetivo"></textarea>
+            <textarea placeholder="Escribe..." id="objetivo"></textarea>
 
             <label for="financiacion">Meta de financiación</label>
             <input type="number" id="financiacion" placeholder="Escribe...">
@@ -46,11 +53,13 @@
             <label for="ciudad">Ciudad</label>
             <input type="text" id="ciudad" placeholder="Escribe...">
 
-            <label for="imagenPortada">Seleccione una imagen de portada:</label>
-            <input type="file" id="imagenPortada" name="imagenPortada" accept="image/*">
-            <br><br>
-            <label for="imagenDescrip">Seleccione una imagen de descripción:</label>
-            <input type="file" id="imagenDescrip" name="imagenDescrip" accept="image/*">
+            <div class="campos-img">
+                <label for="imagenPortada">Seleccione una imagen de portada:</label>
+                <input type="file" id="imagenPortada" name="imagenPortada" accept="image/*">
+                <br><br>
+                <label for="imagenDescrip">Seleccione una imagen de descripción:</label>
+                <input type="file" id="imagenDescrip" name="imagenDescrip" accept="image/*">
+            </div>
 
         </fieldset>
 
