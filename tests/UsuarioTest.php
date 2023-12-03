@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 class UsuarioTest extends TestCase{
     public function testConstructConArgumentosUsuarioTest() {
         $args = [
-            'idusuarios' => 1,
+            'id' => 1,
             'nombre' => 'John Doe',
             'password' => 'password123',
             'email' => 'john@example.com',
@@ -16,7 +16,7 @@ class UsuarioTest extends TestCase{
     
         $usuario = new \Model\Usuario($args);
     
-        $this->assertEquals($args['idusuarios'], $usuario->idusuarios);
+        $this->assertEquals($args['id'], $usuario->id);
         $this->assertEquals($args['nombre'], $usuario->nombre);
         $this->assertEquals($args['password'], $usuario->password);
         $this->assertEquals($args['email'], $usuario->email);

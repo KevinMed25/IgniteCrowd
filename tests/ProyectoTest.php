@@ -7,7 +7,7 @@ class ProyectoTest extends TestCase{
 
     public function testConstructConArgumentosProyectoTest() {
         $args = [
-            'idproyectos' => 1,
+            'id' => 1,
             'nombre_proyecto' => 'Proyecto Test',
             'descripcion' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum odio a mattis ullamcorper. 
                               Pellentesque placerat lorem ac lorem scelerisque aliquam. Nulla a mauris sapien. Vivamus ac egestas nulla. 
@@ -23,7 +23,7 @@ class ProyectoTest extends TestCase{
     
         $proyecto = new \Model\Proyecto($args);
     
-        $this->assertEquals($args['idproyectos'], $proyecto->idproyectos);
+        $this->assertEquals($args['id'], $proyecto->id);
         $this->assertEquals($args['nombre_proyecto'], $proyecto->nombre_proyecto);
         $this->assertEquals($args['descripcion'], $proyecto->descripcion);
         $this->assertEquals($args['total_a_financiar'], $proyecto->total_a_financiar);
