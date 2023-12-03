@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS `proyectos`;
 CREATE TABLE `proyectos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre_proyecto` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `descripcion` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `total_a_financiar` decimal(10,2) DEFAULT NULL,
   `num_backers` int DEFAULT NULL,
   `portada` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -103,7 +103,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Kevin','Medina Padilla',NULL,'25092001','kevinmedina2509Jr@gmail.com','9996131871',0);
+INSERT INTO `usuarios` VALUES (1,'Kevin','Medina Padilla',NULL,'$2y$10$fIlI6uPUS8B49XEyqwEuJOcu/cmuVAiukMAZjEpDXRo5h8yKm8TWm','kevinmedina2509Jr@gmail.com','9996131871',0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -116,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-03 13:40:36
+-- Dump completed on 2023-12-03 15:55:48
