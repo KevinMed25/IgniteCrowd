@@ -383,6 +383,11 @@ select option:hover {
 */
 
 /* Estilos para la barra lateral */
+.contenedor-ayuda{
+    width: 100%;
+    display: block;
+}
+
 #nav .lateral {
     position: absolute;
 }
@@ -394,11 +399,11 @@ select option:hover {
 .sidenav {
     transition: 0s; 
     margin-left: 5rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
  
 .sidenav a {
-    padding: 0.8rem 0.8rem 0.8rem 3.2rem;
+    padding: 0.8rem;
     text-decoration: none;
     font-size: 2.5rem;
     color: #292929;
@@ -448,31 +453,12 @@ select option:hover {
     height: 4.2rem;
 }
 
-.button {
-    right: 0;
-    top: 0;
-    padding: 0.9rem 0;
-    float: right;
-    border: 0;
-    width: 4.2rem;
-    height: 4.2rem;
-    cursor: pointer;
-    text-align: center;
-    padding-top: 1rem;
-    transition: all 0.25s linear;
-    background: transparent;
-    z-index: 10;
-    position: absolute;
-    border: 0;
-    vertical-align: top;
-}
-
 /* Estilos para el contenido principal */
 .titulo-cuerpo {
     text-align: left; 
     font-family: Arial; 
     font-weight: bold; 
-    font-size: 6rem; 
+    font-size: 5rem; 
     color: var(--azulClaro); 
 }
 
@@ -497,7 +483,7 @@ select option:hover {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 1rem 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
   
 .grid-item {
@@ -509,8 +495,8 @@ select option:hover {
 }
 
 .grid-img {
-    width:21rem;
-    height:19rem;
+    width:20rem;
+    height:18rem;
     padding-left: 1rem;
 }
 
@@ -710,7 +696,7 @@ fieldset{
 }
 
 input[type=text], textarea, input[type=email], 
-input[type=tel], input[type=number], #categoria {
+input[type=tel], input[type=number], .categoria {
     width: 100%;
     padding: 1.2rem;
     border: 0.1rem solid #ccc;

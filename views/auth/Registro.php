@@ -6,7 +6,8 @@
     <title>Regístrarse</title>
     <link rel="stylesheet" type="text/css" href="estilosFormularios.css">
 </head>
-<body>
+
+<div class="contenedor">
     <div class="formulario-registro">
         <h1>Regístrate</h1>
         <form method="post">
@@ -44,5 +45,5 @@
             </div>
         </form>
     </div>
-</body>
+</div>
 </html>

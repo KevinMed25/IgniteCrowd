@@ -36,7 +36,7 @@
 
             <label for="categoria">Categoría</label>
             <div class="selector-categoria">
-                <select name="categoria" id="categoria">
+                <select name="categoria" class="categoria">
                     <option class="opcion" value="">Todas las categorías...</option>
                     <option class="opcion" value="categoria1">Libros</option>
                     <option class="opcion" value="categoria2">Manga</option>

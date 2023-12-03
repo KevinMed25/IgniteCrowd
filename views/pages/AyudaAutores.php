@@ -1,9 +1,9 @@
+<div class="contenedor-ayuda">
 <nav class="lateral">
     <div class="cajabuscar">
         <form method="get" class="buscarform">
             <fieldset>
                 <input type="text" class="s" value="" placeholder="Buscar" />
-                <input class="button" type="submit" value="" />
             </fieldset>
         </form>
     </div>
@@ -62,4 +62,4 @@
         </div>
     </div>
 </div>
-</body>
+</div>
