@@ -1,5 +1,7 @@
 <?php
+
 namespace Model;
+
 class Proyectos extends ActiveRecord {
     protected static $tabla = 'proyectos';
     protected static $columnasDB =['idproyectos','nombre_proyecto','descripcion', 'portada', 'img_descripcion', 'fecha_creacion'];
