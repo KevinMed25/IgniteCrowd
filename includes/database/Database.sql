@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
--- Host: localhost    Database: ignitecrowd
+-- Host: localhost    Database: bines_raices_crud
 -- ------------------------------------------------------
 -- Server version	8.0.35
 
@@ -16,24 +16,53 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `ingresos`
+-- Table structure for table `propiedades`
 --
 
-LOCK TABLES `ingresos` WRITE;
-/*!40000 ALTER TABLE `ingresos` DISABLE KEYS */;
-INSERT INTO `ingresos` VALUES (1,1,1,149.00),(2,1,2,300.00),(3,1,3,365.00);
-/*!40000 ALTER TABLE `ingresos` ENABLE KEYS */;
+DROP TABLE IF EXISTS `propiedades`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `propiedades` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `precio` decimal(10,2) DEFAULT NULL,
+  `imagen` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `descripcion` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `habitaciones` int DEFAULT NULL,
+  `wc` int DEFAULT NULL,
+  `estacionamiento` int DEFAULT NULL,
+  `creado` date DEFAULT NULL,
+  `vendedores_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_propiedades_vendedores_idx` (`vendedores_id`),
+  CONSTRAINT `fk_propiedades_vendedores` FOREIGN KEY (`vendedores_id`) REFERENCES `vendedores` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `propiedades`
+--
+
+LOCK TABLES `propiedades` WRITE;
+/*!40000 ALTER TABLE `propiedades` DISABLE KEYS */;
+INSERT INTO `propiedades` VALUES (14,'Chozita',70000.00,'2b3941135d1bf3fd26b3bf177192a746.jpg','    probando  probando  probando  probando  probando  probando  probando  probando  probando  probando ',3,3,3,'2023-05-28',2),(18,'Casa en la playita',40000.00,'f624383bc20f6603143dcc928a658c79.jpg',' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor augue felis, facilisis bibendum tortor dictum vel.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor augue felis, facilisis bibendum tortor dictum vel.',3,3,3,'2023-06-01',2),(22,' Casa Mérida',800000.00,'9bfd3b7d01ae0029ab064d1d30977480.jpg','    Propiedad en Mérida  Propiedad en Mérida  Propiedad en Mérida  Propiedad en Mérida  Propiedad en Mérida  Propiedad en Mérida  Propiedad en Mérida  Propiedad en Mérida',3,2,1,'2023-06-05',1),(23,' Casa Mérida',3000000.00,'b05728dc7a9b61feb5241697ab758b6f.jpg','  Casa Mérida (Actualizado) Casa Mérida (Actualizado) Casa Mérida (Actualizado) Casa Mérida (Actualizado) Casa Mérida (Actualizado) Casa Mérida (Actualizado)',4,4,1,'2023-06-05',1),(27,' Casa Prueba',54000.00,'378bf55a591e9d37c5ecc75f99751198.jpg','  Casa Prueba Casa Prueba Casa Prueba Casa Prueba Casa Prueba Casa Prueba Casa Prueba Casa Prueba Casa Prueba Casa Prueba Casa Prueba',3,3,3,'2023-06-14',1);
+/*!40000 ALTER TABLE `propiedades` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping data for table `proyectos`
+-- Table structure for table `usuarios`
 --
 
-LOCK TABLES `proyectos` WRITE;
-/*!40000 ALTER TABLE `proyectos` DISABLE KEYS */;
-INSERT INTO `proyectos` VALUES (1,'Infierno',' Aquí irá una breve descripcion general del proyecto',700.00,'InfernoSmall.jpg',NULL,'Libros','Mérida, Yucatán','2023-12-02'),(2,'Electro Albúm',' Aquí irá una breve descripcion general del proyecto',800.00,'AlumMusica.jpeg',NULL,'Música','Mérida, Yucatán','2023-12-02'),(3,'Tokyo Ghoul',' Aquí irá una breve descripcion general del proyecto',400.00,'portadaManga.jpg',NULL,'Mangas','Mérida, Yucatán','2023-12-02');
-/*!40000 ALTER TABLE `proyectos` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `usuarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` char(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `usuarios`
@@ -41,8 +70,34 @@ UNLOCK TABLES;
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Kevin','Medina Padilla','25092001','kevinmedina2509Jr@gmail.com','9996131871',0);
+INSERT INTO `usuarios` VALUES (5,'correo@correo.com','$2y$10$fIlI6uPUS8B49XEyqwEuJOcu/cmuVAiukMAZjEpDXRo5h8yKm8TWm');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `vendedores`
+--
+
+DROP TABLE IF EXISTS `vendedores`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `vendedores` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `apellido` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telefono` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `vendedores`
+--
+
+LOCK TABLES `vendedores` WRITE;
+/*!40000 ALTER TABLE `vendedores` DISABLE KEYS */;
+INSERT INTO `vendedores` VALUES (1,'Kevin','Medina','9996131871'),(2,'Alejandro','Padilla','9993142113'),(3,' Miguel','Medina','6565165165'),(8,'María','Padilla','1234567891');
+/*!40000 ALTER TABLE `vendedores` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-02 23:07:47
+-- Dump completed on 2023-12-02 23:19:13
