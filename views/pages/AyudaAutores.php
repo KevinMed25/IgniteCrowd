@@ -26,7 +26,7 @@
         <div class="grid-item">Accede a la edición</div>
 
         <div>
-            <img src="imgs\paso-1.png" class="grid-img">
+            <img src="/src/img/paso-1.png" class="grid-img">
         </div>
 
         <div class="texto-forma">
@@ -34,7 +34,7 @@
         </div>
 
         <div>
-            <img src="imgs\paso-2.png" class="grid-img">
+            <img src="/src/img/paso-2.png" class="grid-img">
         </div>
 
         <div class="texto-forma">
@@ -48,14 +48,14 @@
         <div class="grid-item">¡Publica tu obra!</div>
 
         <div>
-            <img src="imgs\paso-3.png" class="grid-img">
+            <img src="/src/img/paso-3.png" class="grid-img">
         </div>
         <div class="texto-forma">
             ¡No te preocupes por el tiempo! Tienes todo el tiempo que requieras para editar la sección de tu proyecto.
         </div>
 
         <div>
-            <img src="imgs\paso-4.png" class="grid-img">
+            <img src="/src/img/paso-4.png" class="grid-img">
         </div>
         <div class="texto-forma">
             Cuando hayas terminado podrás publicarla y comenzar la aventura de un nuevo proyecto.

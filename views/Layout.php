@@ -48,7 +48,7 @@ if (!isset($isRegistro)) {
         <a href="/PreguntasFrecuentes" class="botones-footer">Preguntas frecuentes</a>
         <a href="/AyudaAutores" class="botones-footer">Ayuda para autores</a>
         <div class="boton-cookies">
-            <a href="#" class="botones-footer">Cookies</a>
+            <a href="/Cookies" class="botones-footer">Cookies</a>
         </div>
     </footer>
 </body>
