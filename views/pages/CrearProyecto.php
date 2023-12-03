@@ -27,7 +27,7 @@
 
         <fieldset>
             <legend>Tu Proyecto</legend>
-            <h2>Datos del Proyecto</h2>
+            <h2>Datos del proyecto</h2>
 
             <label for="proyecto">Título del proyecto</label>
             <input type="text" id="proyecto" placeholder="Escribe...">

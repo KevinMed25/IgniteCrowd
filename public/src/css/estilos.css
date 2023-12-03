@@ -168,6 +168,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 6rem;
+    margin-top: 6rem;
 }
 
 .contenedor a {
@@ -274,7 +275,7 @@ body {
 /* Estilos para la barra de filtrado */
 .filtro-barra {
     width: 100%;
-    background: linear-gradient(to bottom, var(--azulClaro), var(--azulOscuro) );
+    background: linear-gradient(to bottom, var(--azulClaro), var(--azulOscuro));
     padding: 1rem 0;
     display: flex;
     justify-content: space-around;
@@ -294,7 +295,7 @@ select option {
     background-color: var(--azulClaro); 
     color: #fff;
     padding: 0.5rem;
-    border-bottom: 1rem solid var(--amarillod);
+    border-bottom: 1rem solid var(--amarillo);
     font-size: 2rem;
     border-radius: 0;
 }
@@ -305,6 +306,7 @@ select option:hover {
 
 .selector p {
     font-size: 2.5rem;
+    font-weight: bold;
     margin: 0;
     color: var(--naranja);
 }
@@ -661,11 +663,13 @@ select option:hover {
 }
 
 legend {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
+    color: var(--azulClaro);
 }
 
 fieldset{
+    color: #555555;
     padding-left: 6rem;
     padding-right: 6rem;
     padding-bottom: 6rem;
@@ -713,7 +717,6 @@ input[type=tel]:hover, input[type=number]:hover{
 
 .formulario label {
     font-weight: bold;
-    color: #555555;
 }
 
 .campos-img {
