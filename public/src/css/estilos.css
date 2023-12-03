@@ -90,8 +90,8 @@ body {
 .sobre-nosotros {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5rem;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
     border-radius: 1rem;
 }
 
@@ -260,6 +260,17 @@ body {
 
 */
 
+.panel-catalogo {
+    padding: 10rem;
+    color:#fff;
+    width: 100%;
+    height: 40rem;
+    background-image: url(../img/creativo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom; 
+}
+
 /* Estilos para la barra de filtrado */
 .filtro-barra {
     width: 100%;
@@ -396,14 +407,14 @@ select option:hover {
 }
  
 .sidenav a:hover, .offcanvas a:focus {
-    color: #efe558;
+    color: var(--azulClaro);
 }
 
 /* Estilos para la barra de búsqueda */
 .cajabuscar {
     float: none;
     width: 100%;
-    max-width: 20rem;
+    max-width: 25rem;
     margin-bottom: 2.5rem;
     margin-top: 15rem;
     margin-left: 5rem;
@@ -412,7 +423,7 @@ select option:hover {
     text-align: left;
 }
 
-#buscarform {
+.buscarform {
     padding: 0;
     float: left;
     clear: both;
@@ -420,29 +431,12 @@ select option:hover {
     position: relative;
 }
 
-#buscarform fieldset { 
+.buscarform fieldset { 
     float: left;
-}
-
-#buscarform .search {
-    font-size: 2rem;
-    top: 0rem;
-    color: #FFF;
-    background: var(--amarillo);
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0.9rem;
-    height: 3.5rem;
-    width: 3.5rem;
-    text-align: center;
-}
-
-#buscarform fieldset { 
     width: 100%;
 }
 
-#s {
+.s {
     width: 100%;
     background-color: #fff;
     float: left;
@@ -465,7 +459,6 @@ select option:hover {
     cursor: pointer;
     text-align: center;
     padding-top: 1rem;
-    color: #a4a4a4;
     transition: all 0.25s linear;
     background: transparent;
     z-index: 10;
@@ -571,15 +564,22 @@ select option:hover {
 }
 
 /* Estilos para el contenido del metodo de pago */
+.subtitulo {
+    padding-left: 3rem;
+    margin: 0;
+}
+
 .informacion {
-    padding: 1rem;
+    padding: 4rem;
+    width: 50rem;
+    margin-bottom: 2rem;
     border: 0.3rem solid;
     border-color: var(--azulClaro);
     border-radius: 0.5rem;
 }
 
 .pago {
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .boton-confirmar {
@@ -598,7 +598,7 @@ select option:hover {
     font-weight: bold;
 }
 
-input[type=submit] {
+.boton-confirmar input[type=submit] {
     background-color: var(--azulClaro);
     border-radius: 0.5rem;
     border: none;
@@ -607,7 +607,7 @@ input[type=submit] {
     padding: 1.5rem;
 }
 
-input[type=submit]:hover {
+.boton-confirmar input[type=submit]:hover {
     background-color: var(--azulOscuro);
 }
 
@@ -616,11 +616,6 @@ input[type=submit]:hover {
     Estilos para la Página de Descripción
     
 */
-
-/* Estilos para el header */
-.header-descripcion {
-    margin-bottom: 3rem;
-}
 
 /* Estilos para el contenido principal */
 .titulo-descripcion {
@@ -669,33 +664,31 @@ input[type=submit]:hover {
 
 */
 
-.subtitulos {
-    text-align: center;
-}
-
 .contenedor-crear {
     display: block;
     width: 100%;
-    padding-bottom: 6rem;
+    padding: 4rem;
 }
 
-.formulario-crear {
-    border-radius: 1rem;
-    background-color:#c6c6c779;
+.formulario {
     padding: 3rem;
 }
 
-.tu-proyecto {
+legend {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+fieldset{
     padding-left: 4rem;
     padding-right: 4rem;
+    padding-bottom: 4rem;
+    border-radius: 1rem;
+    border: 0.3rem solid var(--azulClaro);
 }
-
-.text, .caja {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: left;
+#descrip, #objetivo{
+    height: 20rem;
 }
-
 .botones-confirmar {
     display: flex;
     justify-content: center;
@@ -716,7 +709,8 @@ input[type=submit]:hover {
     background-color: var(--azulOscuro);
 }
 
-input[type=text], textarea {
+input[type=text], textarea, input[type=email], 
+input[type=tel], input[type=number], #categoria {
     width: 100%;
     padding: 1.2rem;
     border: 0.1rem solid #ccc;
@@ -724,6 +718,7 @@ input[type=text], textarea {
     resize: vertical;
 }
 
-input[type=text]:hover, textarea:hover {
+input[type=text]:hover, textarea:hover, input[type=email]:hover, 
+input[type=tel]:hover, input[type=number]:hover{
     border: 0.2rem solid var(--azulClaro);
 }

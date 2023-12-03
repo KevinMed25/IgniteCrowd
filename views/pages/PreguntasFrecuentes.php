@@ -7,19 +7,21 @@
     <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-    <ul class="navegacion">
-        <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
-        <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
-        <li>
-            <a href="./index.html">
-                <div class="logo-container">
-                    Ignite<span>Crowd</span>
-                </div>
-            </a>
-        </li>
-        <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
-        <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
-    </ul>
+    <header class="header">
+        <ul class="navegacion">
+            <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
+            <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
+            <li>
+                <a href="./index.html">
+                    <div class="logo-container">
+                        Ignite<span>Crowd</span>
+                    </div>
+                </a>
+            </li>
+            <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
+            <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
+        </ul>
+    </header>
     
     <div class="encabezado">
         <h1>Preguntas frecuentes</h1>

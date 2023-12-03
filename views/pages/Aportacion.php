@@ -7,41 +7,39 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <ul class="navegacion">
-        <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
-        <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
-        <li>
-            <a href="./index.html">
-                <div class="logo-container">
-                    Ignite<span>Crowd</span>
-                </div>
-            </a>
-        </li>
-        <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
-        <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
-    </ul>
-    
+    <header class="header">
+        <ul class="navegacion">
+            <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
+            <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
+            <li>
+                <a href="./index.html">
+                    <div class="logo-container">
+                        Ignite<span>Crowd</span>
+                    </div>
+                </a>
+            </li>
+            <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
+            <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
+        </ul>
+    </header>
     <div class="contenedor-aportacion">
         <div class="pago">
             <div class="titulo">
                 <h2>Aportación</h2>
             </div>
             <h3 class="subtitulo">Método de pago</h3>
-            <div class="informacion">
                 <form class="checkbox">
+                    <div class="informacion">
                     <input type="radio" id="tarjeta" name="metodo-pago" value="Tarjeta">
                     <label for="tarjeta">Tarjeta</label>
                     <input type="radio" id="paypal" name="metodo-pago" value="Paypal">
                     <label for="paypal">Paypal</label>
-                </form> 
-            </div>
-            <div class="boton-confirmar">
-                <a href="#">
-                    <input type="submit" value="Realizar aportación">
-                </a>
-            </div>
+                    </div>
+                    <div class="boton-confirmar">
+                            <input type="submit" value="Realizar aportación">
+                    </div>
+                </form>
         </div>
-        
         <div class="proyecto">
             <div class="nombre">
                 <h2>Nombre del proyecto seleccionado</h2>

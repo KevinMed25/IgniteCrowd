@@ -7,26 +7,28 @@
     <link href="estilos.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <ul class="navegacion">
-        <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
-        <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
-        <li>
-            <a href="./index.html">
-                <div class="logo-container">
-                    Ignite<span>Crowd</span>
-                </div>
-            </a>
-        </li>
-        <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
-        <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
-    </ul>
+    <header class="header">
+        <ul class="navegacion">
+            <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
+            <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
+            <li>
+                <a href="./index.html">
+                    <div class="logo-container">
+                        Ignite<span>Crowd</span>
+                    </div>
+                </a>
+            </li>
+            <li><a  class="enlace" href="Registro.html">Registrarse</a></li>
+            <li><a  class="enlace" href="IniciarSesion.html">Iniciar sesión</a></li>
+        </ul>
+    </header>
 
     <nav class="lateral">
-        <div class="cajabuscar"><form method="get" id="buscarform">
+        <div class="cajabuscar">
+            <form method="get" class="buscarform">
             <fieldset>
-                <input type="text" id="s" value="" placeholder="Buscar" />
+                <input type="text" class="s" value="" placeholder="Buscar" />
                 <input class="button" type="submit" value=""/>
-                <i class="search"></i>
             </fieldset>
             </form>
         </div>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="header-descripcion">
+    <header class="header">
         <ul class="navegacion">
             <li><a href="./catalogo.html" class="enlace">Explorar</a></li>
             <li><a class="enlace" href="crear.html">Empieza tu proyecto</a></li>
