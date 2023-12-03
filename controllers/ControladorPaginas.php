@@ -18,7 +18,12 @@ class ControladorPaginas {
     }
 
     public static function catalogo(Router  $router) {
-        $router -> render('pages/Catalogo', []);
+        $proyectos = Proyecto::all();
+        $ingresos = Ingresos::all();
+        $router -> render('pages/Catalogo', [
+            'proyectos' => $proyectos,
+            'ingresos' => $ingresos,
+        ]);
     }
     
     public static function crearProyecto(Router $router) {

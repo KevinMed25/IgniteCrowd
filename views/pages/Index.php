@@ -7,20 +7,32 @@
 <main class="catalogo">
     <h1 class="titulo">Apoya ideas innovadoras!</h1>
     <div class="contenedor">
-    <?php foreach($proyectos as $proyecto): ?>
-        <a href="/proyecto?id=<?php echo $proyecto->idproyectos; ?>">
-            <article class="card">
-                <div class="imagen">
-                    <img src="/images/<?php echo $proyecto->portada; ?>">
-                </div>
-                <div class="info-proyecto">
-                    <h2><?php echo $proyecto->nombre_proyecto; ?></h2>
-                    <p><span class="backers">200 </span><br>Backers</p>
-                    <p><span class="cifra">$300</span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
-                </div>
-            </article>
-        </a>
-    <?php endforeach; ?>
+        <?php foreach ($proyectos as $proyecto) : ?>
+
+            <?php
+            // Buscar ingreso correspondiente
+            $ingresoCorrespondiente;
+            foreach ($ingresos as $ingreso) {
+                if ($ingreso->idproyectos == $proyecto->idproyectos) {
+                    $ingresoCorrespondiente = $ingreso;
+                    break;
+                }
+            }
+            ?>
+
+            <a href="/proyecto?id=<?php echo $proyecto->idproyectos; ?>">
+                <article class="card">
+                    <div class="imagen">
+                        <img src="/images/<?php echo $proyecto->portada; ?>">
+                    </div>
+                    <div class="info-proyecto">
+                        <h2><?php echo $proyecto->nombre_proyecto; ?></h2>
+                        <p><span class="backers"><?php echo $proyecto->num_backers; ?> </span><br>Backers</p>
+                        <p><span class="cifra">$<?php echo $ingresoCorrespondiente->ingresos; ?></span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
+                    </div>
+                </article>
+            </a>
+        <?php endforeach; ?>
     </div>
     <a class="boton" href="/Catalogo">Ver más Proyectos</a>
 </main>
