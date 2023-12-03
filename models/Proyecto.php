@@ -49,12 +49,24 @@ class Proyecto extends ActiveRecord {
             self::$errores[] = "Debes añadir una descripción y debe tener al menos 50 caracteres";
         }  
 
+        if(!$this->total_a_financiar) {
+            self::$errores[] = "El total a financiar es obligatorio";
+        } 
+
         if(!$this->portada) {
             self::$errores[] = "La portada es obligatoria";
         }
 
         if(!$this->img_descripcion) {
             self::$errores[] = "La imagen de la descripción es obligatoria";
+        }
+
+        if(!$this->categoria) {
+            self::$errores[] = "La categoría es obligatoria";
+        }
+
+        if(!$this->ciudad) {
+            self::$errores[] = "La ciudad es obligatoria";
         }
 
         return self::$errores;
