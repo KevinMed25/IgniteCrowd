@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($_SESSION)) {
-    session_start(); //verfiicar si la session ya existia, si no, inicia
+    session_start();
 }
 
 $auth = $_SESSION['login'] ?? false;

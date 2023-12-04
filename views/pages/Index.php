@@ -10,7 +10,6 @@
         <?php foreach ($proyectos as $proyecto) : ?>
 
             <?php
-            // Buscar ingreso correspondiente
             $ingresoCorrespondiente;
             foreach ($ingresos as $ingreso) {
                 if ($ingreso->idproyectos == $proyecto->id) {

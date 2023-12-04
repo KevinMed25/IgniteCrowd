@@ -38,5 +38,4 @@
             <p><span class="backers">$<?php echo $ingresos->ingresos; ?></span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
         </div>
     </div>
-    <!-- <a class="boton" href="./catalogo.html">Ver más Proyectos</a> -->
 </main>

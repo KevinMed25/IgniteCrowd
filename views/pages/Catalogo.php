@@ -39,7 +39,6 @@
         <?php foreach ($proyectos as $proyecto) : ?>
 
             <?php
-            // Buscar ingreso correspondiente
             $ingresoCorrespondiente;
             foreach ($ingresos as $ingreso) {
                 if ($ingreso->idproyectos == $proyecto->id) {
@@ -63,5 +62,4 @@
             </a>
         <?php endforeach; ?>
     </div>
-    <!-- <a class="boton" href="#">Ver más Proyectos</a> -->
 </main>
