@@ -58,19 +58,14 @@ class Sesion extends ActiveRecord {
     }
 
     public function validar() {
-          
-        // if(!$this->nombre) {
-        //     self::$errores[] = "Debes añadir tu nombre.";
-        // }   
+            
         if(!$this->password) {
             self::$errores[] = "Debes añadir una contraseña";
         }  
         if(!$this->email) {
             self::$errores[] = "Debes añadir tu email.";
         }  
-        // if(!$this->telefono) {
-        //     self::$errores[] = "Debes añadir tu teléfono.";
-        // }  
+ 
         return self::$errores;
     }
 
