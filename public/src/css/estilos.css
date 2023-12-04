@@ -384,78 +384,13 @@ select option:hover {
 
 */
 
-/* Estilos para la barra lateral */
+/* Estilos para el contenido principal */
 .contenedor-ayuda{
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
-#nav .lateral {
-    position: absolute;
-}
-
-.lateral {
-    float: left;
-}
-
-.sidenav {
-    transition: 0s; 
-    margin-left: 5rem;
-    font-size: 2.5rem;
-}
- 
-.sidenav a {
-    padding: 0.8rem;
-    text-decoration: none;
-    font-size: 2.5rem;
-    color: #292929;
-    display: block;
-    transition: 0.3s
-}
- 
-.sidenav a:hover, .offcanvas a:focus {
-    color: var(--azulClaro);
-}
-
-/* Estilos para la barra de búsqueda */
-.cajabuscar {
-    float: none;
-    width: 100%;
-    max-width: 25rem;
-    margin-bottom: 2.5rem;
-    margin-top: 15rem;
-    margin-left: 5rem;
-    margin-right: auto;
-    display: inline-block;
-    text-align: left;
-}
-
-.buscarform {
-    padding: 0;
-    float: left;
-    clear: both;
-    width: 100%;
-    position: relative;
-}
-
-.buscarform fieldset { 
-    float: left;
-    width: 100%;
-}
-
-.s {
-    width: 100%;
-    background-color: #fff;
-    float: left;
-    padding: 0.8rem 0;
-    text-indent: 10px;
-    color: #555555;
-    border: 0.1rem solid #fff; 
-    box-sizing: border-box;
-    height: 4.2rem;
-}
-
-/* Estilos para el contenido principal */
 .titulo-cuerpo {
     text-align: left; 
     font-family: Arial; 
@@ -466,7 +401,6 @@ select option:hover {
 
 .cuerpo {
     margin-top: 5rem;
-    margin-left: 38rem;
     margin-bottom: 10rem;
     font-family:sans-serif ;
     font-size: 2.5rem ;
@@ -616,7 +550,7 @@ select option:hover {
 
 .contenedor-descripcion {
     display: grid;
-    grid-template-columns: 85rem 35rem;
+    grid-template-columns: 75rem 35rem;
     gap: 3rem;
     justify-content: center;
     align-items: center;
@@ -774,6 +708,24 @@ input[type=tel]:hover, input[type=number]:hover{
         font-size: 2rem;
     }
 
+    /* Estilo Descripción */
+    .contenedor-descripcion {
+        grid-template-columns: auto auto;
+        padding: 1rem;
+    }
+
+    /* Estilo Ayuda Autores */
+    .grid-container {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .grid-item {
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -841,17 +793,63 @@ input[type=tel]:hover, input[type=number]:hover{
     }
 
     /* Estilos Crear */
-
     legend {
         font-size: 2.5rem;
     }
 
     fieldset {
         font-size: 1.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
     }
 
     .contenedor-crear {
         padding: 1rem;
+    }
+
+    /* Estilo Descripción */
+    .contenedor-descripcion {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .texto-descripcion {
+        font-size: 2rem;
+    }
+
+    .barra-informacion {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Estilo Ayuda Autores */
+
+    .titulo-cuerpo {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .cuerpo {
+        font-size: 1.5rem;
+    }
+
+    /* Estilos Preguntas Frecuentes */
+    .preguntas-autores div p, 
+    .preguntas-patrocinadores div p, 
+    .preguntas-nosotros div p {
+        font-size: 1.2rem;
+    }
+
+    .preguntas-autores div,
+    .preguntas-patrocinadores div,
+    .preguntas-nosotros div {
+        margin: 0.5rem;
+    }
+
+    .preguntas-nosotros div {
+        width: 80%;
     }
 
 }
@@ -864,6 +862,21 @@ input[type=tel]:hover, input[type=number]:hover{
 
     .panel-catalogo {
         padding: 3rem;
+    }
+
+    .barra-informacion {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .preguntas-autores,
+    .preguntas-patrocinadores {
+        flex-direction: column;
+    }
+
+    .preguntas-autores div,
+    .preguntas-patrocinadores div,
+    .preguntas-nosotros div {
+        width: 90%;
     }
 
 }

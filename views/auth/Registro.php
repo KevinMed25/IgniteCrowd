@@ -21,7 +21,7 @@
             </div>
             <div class="segundo-apellido">
                 <input type="text" id="segundoApellido" required>
-                <label for="segundoApellido">Segundo Apellido</label>
+                <label for="segundoApellido">Segundo apellido</label>
             </div>
             <div class="tel-usuario">
                 <input type="tel" id="telUsuario" required>

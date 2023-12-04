@@ -1,22 +1,5 @@
 <div class="contenedor-ayuda">
-<nav class="lateral">
-    <div class="cajabuscar">
-        <form method="get" class="buscarform">
-            <fieldset>
-                <input type="text" class="s" value="" placeholder="Buscar" />
-            </fieldset>
-        </form>
-    </div>
-
-    <div id="sideNavigation" class="sidenav">
-        <h2>Categorías</h2>
-        <a href="#">Enviar respuesta</a>
-        <a href="#">Empezar campaña</a>
-        <a href="#">¿Cómo funciona?</a>
-        <a href="#">Procedimiento</a>
-    </div>
-</nav>
-
+    
 <div class="cuerpo">
     <p class="titulo-cuerpo">¡Esto te puede ayudar!</p>
     <p class="grid-item">¿Cómo puedo iniciar mi proyecto?</p>
