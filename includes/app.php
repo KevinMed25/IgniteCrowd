@@ -6,7 +6,6 @@
 
     use Model\ActiveRecord;
 
-    //conectar a db
     $db = conectarBaseDatos();
 
     new ActiveRecord;

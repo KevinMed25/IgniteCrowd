@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @return $baseDatos devuelve una instancia de la conexion a la base de datos
+ */
 function conectarBaseDatos() : mysqli {
     $baseDatos = new mysqli('localhost', 'root', 'root', 'ignitecrowd' , 3306);
     $baseDatos->set_charset("utf8");
@@ -8,13 +11,7 @@ function conectarBaseDatos() : mysqli {
         die("¡Error, no se pudo realizar la conexión!: " . $baseDatos->connect_error);
     }
 
-    //echo "Conexión exitosa";
-
     return $baseDatos;  
 }
-
-// $conexion = conectarBaseDatos();
-
-// $conexion->close();  
 
 ?>
