@@ -4,12 +4,10 @@ namespace Model;
 
 class ActiveRecord {
 
-    //Base de datos:
     protected static $baseDeDatos;
     protected static $columnasDB =[];
     protected static $tabla = '';
 
-    //Errores:
     protected static $errores = [];
     
     /**
@@ -21,7 +19,6 @@ class ActiveRecord {
 
     public function guardar() {
         if (!is_null($this->id)) {
-            //Actualizar:
             $this->actualizar();
         } else {
             $this->crear();
@@ -32,7 +29,6 @@ class ActiveRecord {
     public function crear() {
         
         $datos =  $this->sanitizarDatos();
-        //Para insertar
         $query = " INSERT INTO " . static::$tabla . " ( ";
         $query .= join(', ', array_keys($datos));
         $query .=" ) VALUES (' ";
@@ -42,7 +38,7 @@ class ActiveRecord {
         $resultado = self::$baseDeDatos->query($query);
 
         if($resultado) {
-            header('Location: /admin?resultado=1');  // cambiar la dirección 
+            header('Location: /admin?resultado=1');
         }
     }
     
@@ -59,7 +55,7 @@ class ActiveRecord {
         $query .= " LIMIT 1";            
         $resultado = self::$baseDeDatos->query($query);
         if($resultado) {
-            header('Location: /admin?resultado=2'); //Cambiar la dirección
+            header('Location: /admin?resultado=2');
         }
     }
 
@@ -68,7 +64,7 @@ class ActiveRecord {
         $resultado = self::$baseDeDatos->query($query);
         if($resultado) {
             $this -> borrarImagen();
-            header('Location: /admin?resultado=3'); // cambiar la dirección
+            header('Location: /admin?resultado=3');
         }
     }
 
@@ -103,26 +99,27 @@ class ActiveRecord {
      * @param $imagen representa la imagen a subir
      */
     public function setImagen($imagen) {
-        //Eliminar img previa
+  
         if (!is_null($this->id)) {
             $this->borrarImagen();
         }
-        //asignar atributo de la imagen el nombre de la imagen
+
         if($imagen) {
             $this->imagen = $imagen;
         }
     }
 
-    //Eliminar archivos
     public function borrarImagen() {
-        //ver si el archivo existe:
+   
         $existeArchivo = file_exists(CARPETA_IMAGENES.$this->imagen);
         if ($existeArchivo) {
             unlink(CARPETA_IMAGENES.$this->imagen);
         }  
     }
 
-    //Validacion:
+    /**
+     * @return $errores representa los errores a obtener.
+     */
     public static function getErrores() {
         return static::$errores;
     }
@@ -169,7 +166,6 @@ class ActiveRecord {
             $array[] = static::crearObjeto($registro);
         }
 
-        //Liberar memoria
         $resultado->free();
         return $array;
     }
@@ -195,7 +191,7 @@ class ActiveRecord {
     public static function find($id) {
         $query = "SELECT * FROM " . static::$tabla . " WHERE id = $id";
         $resultado = self::consultarSQL($query);
-         return array_shift($resultado);
+        return array_shift($resultado);
     }
 
     /**
@@ -203,7 +199,7 @@ class ActiveRecord {
      */
     public function sincronizar( $args = []) {
         foreach($args as $key => $value) {
-            if (property_exists($this, $key) && !is_null($value)) { //property_exists revisa si una propiedad o atributo de un objeto existe
+            if (property_exists($this, $key) && !is_null($value)) { 
                 $this->$key = $value;
             }  
         }

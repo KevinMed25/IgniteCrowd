@@ -13,6 +13,9 @@ class Usuario extends ActiveRecord {
     public $telefono;
     public $crowdfunder;
     
+    /**
+     * @param args representa un arreglo 
+     */
     function __construct($args = []) {
         
         $this->id = $args['id'] ?? null;
@@ -24,6 +27,9 @@ class Usuario extends ActiveRecord {
 
     }
 
+    /**
+     * @return $errores representa un arreglo en donde se almacenan los errores ocurridos.
+     */
     public function validar() {
           
         if(!$this->nombre) {

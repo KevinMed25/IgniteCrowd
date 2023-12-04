@@ -23,12 +23,5 @@ class Ingresos extends ActiveRecord {
         $this->ingresos = $args['ingresos'] ?? '';
 
     }
-
-    public function validar() {
-          
-        // En este momento no podemos saber si hay que validar algo, tenemos que ver el comportamiento de los datos  
-        
-    }
-
 }
 ?>

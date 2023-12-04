@@ -13,8 +13,11 @@ class Sesion extends ActiveRecord {
     public $telefono;
     public $crowdfunder;
     
+    /**
+     * @param args representa un arreglo 
+     */
     function __construct($args = []) {
-        
+
         $this->id = $args['id'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
         $this->password = $args['password'] ?? '';
@@ -24,6 +27,9 @@ class Sesion extends ActiveRecord {
 
     }
 
+    /**
+     * @return $resultado devuelve el objeto que representa el conjunto de resultados de la consulta.
+     */
     public function existeUsuario() {
         $query = "SELECT * FROM ". self::$tabla . " WHERE email = '" . $this->email ."' LIMIT 1"; 
         $resultado = self::$baseDeDatos->query($query);
@@ -35,6 +41,10 @@ class Sesion extends ActiveRecord {
         return $resultado;
     }
 
+    /**
+     * @param $resultado representa los resultados de la consulta
+     * @return $autenticado representa la autenticación del password
+     */
     public function comprobarPassword($resultado) {
         $usuario = $resultado->fetch_object();
         $autenticado = password_verify($this->password, $usuario->password);
@@ -57,6 +67,9 @@ class Sesion extends ActiveRecord {
         header('Location: /');
     }
 
+    /**
+     * @return $errores representa un arreglo en donde se almacenan los errores ocurridos.
+     */
     public function validar() {
             
         if(!$this->password) {
