@@ -1,0 +1,485 @@
+/* Configuraciones Globales */
+:root {
+    --naranja: #ffb251;
+    --amarillo: #ffcf4e;
+    --azulOscuro: #0023ae;
+    --azulClaro: #3d5eea;
+    --morado: #c2aeff;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+    padding: 0;
+}
+
+/* Estilos para el header */
+.navegacion {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 2rem;
+    list-style: none; 
+    margin: 0;
+}
+
+.navegacion li {
+    margin: 0 1rem;
+}
+
+.navegacion a {
+    text-decoration: none;
+}
+
+.navegacion .enlace {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.navegacion .enlace:hover {
+    transform: scale(1.04);
+    color: var(--azulClaro);
+}
+
+.logo-container {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--azulClaro);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.logo-container span {
+    color:#fff;
+    font-weight: normal;
+}
+
+.panel {
+    padding: 10rem;
+    color:#fff;
+    width: 100%;
+    height: 70rem;
+    background-image: url(../img/creativo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom; 
+}
+
+.sobre-nosotros {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.sobre-nosotros h1 {
+    font-size: 8rem;
+    margin: 0;
+}
+
+.sobre-nosotros p {
+    font-size: 3rem;
+}
+
+/* Estilos para el footer */
+
+.footer {
+    background: linear-gradient(to bottom, #292929, #0e0e0e );
+    width: 100%;
+    height: 30rem;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer h2 {
+    font-size: 3.5rem;
+    margin: 3rem 0 3rem 1rem;
+}
+
+.boton-cookies {
+    display: flex;
+    justify-content: right;
+}
+
+.botones-footer {
+    border-radius: 0.5rem;
+    border: none;
+    color:#ffffff;
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.botones-footer:hover {
+    cursor: pointer;
+    background-color:#ffffff13;
+}
+
+/*
+
+    Estilos para la Página de Inicio de Sesión 
+    
+*/
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background: linear-gradient(150deg, var(--amarillo), var(--azulClaro),var(--azulOscuro));
+}
+
+.formulario-iniciar-sesion {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.formulario-iniciar-sesion h1 {
+    text-align: center;
+    color: #ffffff;
+    padding: 0 0 2rem 0;
+    border-bottom: 0.1rem solid #c0c0c0;
+}
+
+.formulario-iniciar-sesion form {
+    padding: 0 6rem;
+    box-sizing: border-box;
+}
+
+form .nombre-usuario, .contrasenia {
+    position: relative;
+    border-bottom: 0.2rem solid #adadad;
+    margin: 3rem 0;
+}
+.nombre-usuario input, .contrasenia input {
+    width: 100%;
+    padding: 0 0.5rem;
+    height:  4rem;
+    font-size: 1.6rem;
+    background: none;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+}
+
+.nombre-usuario label, .contrasenia label {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    color:#c0c0c0;
+    transform: translateY(-150%);
+    pointer-events: none;
+    font-size: 1.6rem;
+}
+
+.nombre-usuario input:focus + label,
+.contrasenia input:focus + label {
+    transform: translateY(-150%);
+    font-size: 1.2rem;
+    color: transparent;
+    transition: transform 0.2s, font-size 0.2s, color 0.2s;
+}
+
+.recordar-contrasenia {
+    text-decoration: underline;
+    color: #ffffff;
+    margin: 2rem;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(150deg , #000a35, #272500 );
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: #ffffff;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.registrarse {
+    margin: 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.registrarse a {
+    color:#00ffff;
+    text-decoration: none;
+}
+
+.registrarse a:hover {
+    text-decoration: underline;
+}
+
+/*
+
+    Estilos para la Página de Registro 
+    
+*/
+
+.formulario-registro {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+}
+
+.formulario-registro form {
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.formulario-registro h1 {
+    text-align: center;
+    color: #ffffff;
+    padding: 0 0 2rem 0;
+    border-bottom: 0.1rem solid #c0c0c0;
+}
+
+.formulario-registro .nombre-usuario, 
+.primer-apellido, .segundo-apellido, 
+.tel-usuario, .correo-usuario, 
+.contrasenia-usuario, .confirmar-contrasenia {
+    margin: 2rem;
+    position: relative;
+    border-bottom: 0.2rem solid #adadad;
+}
+
+.nombre-usuario input, 
+.primer-apellido input, 
+.segundo-apellido input,
+.tel-usuario input,
+.correo-usuario input, 
+.contrasenia-usuario input,
+.confirmar-contrasenia input {
+    width: 100%;
+    padding: 0 0.5rem;
+    margin-top: 2rem;
+    height:  4rem;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+
+.nombre-usuario label, 
+.primer-apellido label, 
+.segundo-apellido label, 
+.tel-usuario label,
+.correo-usuario label, 
+.contrasenia-usuario label, 
+.confirmar-contrasenia label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color:#c0c0c0;
+    transform: translateY(-150%);
+    pointer-events: none;
+    font-size: 1.6rem;
+}
+
+.nombre-usuario input:focus + label,
+.primer-apellido input:focus + label,
+.segundo-apellido input:focus + label,
+.tel-usuario input:focus + label,
+.correo-usuario input:focus + label,
+.contrasenia-usuario input:focus + label,
+.confirmar-contrasenia input:focus + label {
+    transform: translateY(-150%);
+    font-size: 1.2rem;
+    color: transparent;
+    transition: transform 0.2s, font-size 0.2s, color 0.2s;
+}
+
+.aceptar-terminos {
+    margin: 3rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.iniciar-sesion {
+    margin: 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.iniciar-sesion a {
+    color:#00ffff;
+    text-decoration: none;
+}
+
+.iniciar-sesion a:hover {
+    text-decoration: underline;
+}
+
+/*
+
+    Estilos para la Página de Ayuda 
+    
+*/
+
+.formulario-ayuda {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+}
+
+.formulario-ayuda form {
+    padding: 0 4rem;
+    box-sizing: border-box;
+}
+
+.formulario-ayuda h1 {
+    text-align: center;
+    padding: 0 0 2rem 0;
+    border-bottom: 0.1rem solid #c0c0c0;
+}
+
+.formulario-ayuda .nombre, 
+.asunto, .correo, .descripcion {
+    margin: 2rem;
+    position: relative;
+    border-bottom: 0.2rem solid #adadad;
+}
+
+.nombre input, 
+.asunto input, 
+.correo input, 
+.descripcion input {
+    width: 100%;
+    padding: 0 0.5rem;
+    height:  4rem;
+    font-size: 1.6rem;
+    background: none;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+}
+
+.nombre label, 
+.asunto label,  
+.correo label, 
+.descripcion label {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    color:#c0c0c0;
+    transform: translateY(-150%);
+    pointer-events: none;
+    font-size: 1.6rem;
+}
+
+.nombre input:focus + label,
+.asunto input:focus + label,
+.correo input:focus + label,
+.descripcion input:focus + label {
+  transform: translateY(-150%);
+  font-size: 1.2rem;
+  color: transparent;
+  transition: transform 0.2s, font-size 0.2s, color 0.2s;
+}
+
+.descripcion textarea {
+    resize: both; 
+    width: 30rem; 
+    height: 15rem; 
+    padding: 0.5rem; 
+    background:#ffffff;
+    margin-top: 3.5rem;
+}
+
+.descrip {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    color:#c0c0c0;
+    transform: translateY(-150%);
+    pointer-events: none;
+    font-size: 1.6rem;
+    margin-left: 6rem;
+}
+
+.cerrar {
+    margin: 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.cerrar a {
+    color:#00ffff;
+    text-decoration: none;
+}
+
+.cerrar a:hover {
+    text-decoration: underline;
+}
+
+/* 
+    Media Queries
+*/
+
+@media (max-width: 768px) {
+    /* Estilos en el header */
+    .navegacion {
+        flex-direction: column;
+    }
+
+    .navegacion li {
+        margin-top: 0;
+        margin-bottom: 5rem;
+    }
+
+    li.logo-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0;
+        order: -1;
+    }
+
+    .logo-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilos Iniciar Sesión */
+    .formulario-iniciar-sesion {
+        width: 90%;
+    }
+
+    /* Estilos Registro */
+    .formulario-registro {
+        width: 90%;
+    }
+
+}

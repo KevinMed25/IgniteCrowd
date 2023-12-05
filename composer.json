@@ -1,0 +1,20 @@
+{
+    "name": "kevin/ignite-crowd",
+    "description": "Proyecto de plataforma crowdfunding",
+    "autoload": {
+        "psr-4": {
+            "Model\\": "./models",
+            "MVC\\": "./",
+            "Controllers\\": "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevin Medina",
+            "email": "kevinmedina2509Jr@gmail.com"
+        }
+    ],
+    "require": {
+        
+    }
+}
