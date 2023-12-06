@@ -61,6 +61,7 @@ if (!isset($isRegistro)) {
             <a href="/Cookies" class="botones-footer">Cookies</a>
         </div>
     </footer>
+    <script src="/src/js/App.js"></script>
 </body>
 
 </html>
