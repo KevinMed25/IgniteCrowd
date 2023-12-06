@@ -12,7 +12,7 @@
             <div class="info-proyecto">
                 <h2><?php echo $proyecto->nombre_proyecto; ?></h2>
                 <p><span class="backers"><?php echo $proyecto->num_backers; ?> </span><br>Backers</p>
-                <p><span class="cifra"><?php echo $ingresos->ingresos; ?> </span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
+                <p><span class="cifra"><?php echo $proyecto->ingresos; ?> </span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
             </div>
         </article>
     </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="info">
             <h2>Cantidad recaudada:</h2>
-            <p><span class="backers">$<?php echo $ingresos->ingresos; ?></span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
+            <p><span class="backers">$<?php echo $proyecto->ingresos; ?></span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
         </div>
     </div>
 </main>

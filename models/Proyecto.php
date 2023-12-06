@@ -4,7 +4,7 @@ namespace Model;
 
 class Proyecto extends ActiveRecord {
     protected static $tabla = 'proyectos';
-    protected static $columnasDB =['id','nombre_proyecto','descripcion', 'total_a_financiar','num_backers', 'portada', 'categoria', 'ciudad', 'fecha_creacion'];
+    protected static $columnasDB =['id','nombre_proyecto','descripcion', 'total_a_financiar','num_backers', 'portada', 'categoria', 'ciudad', 'fecha_creacion', 'ingresos', 'usuarioid'];
 
     public $id;
     public $nombre_proyecto;
@@ -16,6 +16,8 @@ class Proyecto extends ActiveRecord {
     public $categoria;
     public $ciudad;
     public $fecha_creacion;
+    public $ingresos;
+    public $usuarioid;
 
     
     /**
@@ -33,7 +35,9 @@ class Proyecto extends ActiveRecord {
         // $this->img_descripcion = $args['img_descripcion'] ?? '';
         $this->categoria = $args['categoria'] ?? '';
         $this->ciudad = $args['ciudad'] ?? '';
-        $this->fecha_creacion = date('Y/m/d');;
+        $this->fecha_creacion = date('Y/m/d');
+        $this->ingresos = $args['ingresos'] ?? 0;
+        $this->usuarioid = $args['usuarioid'] ?? 1;
 
     }
 

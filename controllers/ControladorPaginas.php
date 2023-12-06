@@ -2,7 +2,6 @@
 
 namespace Controllers;
 
-use Model\Ingresos;
 use Model\Proyecto;
 use Model\Usuario;
 use MVC\Router;
@@ -16,10 +15,8 @@ class ControladorPaginas {
      */
     public static function index(Router  $router) {
         $proyectos = Proyecto::get(3);
-        $ingresos = Ingresos::get(3);
         $router -> render('pages/Index', [
             'proyectos' => $proyectos,
-            'ingresos' => $ingresos,
         ]);
     }
 
@@ -30,10 +27,8 @@ class ControladorPaginas {
      */
     public static function catalogo(Router  $router) {
         $proyectos = Proyecto::all();
-        $ingresos = Ingresos::all();
         $router -> render('pages/Catalogo', [
             'proyectos' => $proyectos,
-            'ingresos' => $ingresos,
         ]);
     }
 
@@ -44,16 +39,11 @@ class ControladorPaginas {
      */
     public static function descripcion(Router $router) { 
         $id = validarRedireccionar('/Descripcion');
-        $ingresos = Ingresos::find($id);
-        // debug($ingresos);
-        $proyecto = Proyecto::find($ingresos->idproyectos);
-        $usuario = Usuario::find($ingresos->idusuario);
-
+        $proyecto = Proyecto::find($id);
+        $usuario = Usuario::find($proyecto->usuarioid);
         $router->render('pages/Descripcion', [
             'proyecto' => $proyecto,
-            'ingresos' => $ingresos,
             'usuario' => $usuario,
-
         ]);
     }
 

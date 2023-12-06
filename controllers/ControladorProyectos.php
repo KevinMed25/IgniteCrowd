@@ -17,8 +17,8 @@ class ControladorProyectos {
     public static function crearProyecto(Router $router) {
 
         $proyecto = new Proyecto();
-        $usuario = Usuario::all();
         $errores = Proyecto::getErrores();
+        // debug($_SESSION);
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             //se crea instancia de proyecto
@@ -50,7 +50,6 @@ class ControladorProyectos {
 
         $router->render('pages/CrearProyecto', [
             'proyecto' => $proyecto,
-            'usuario' => $usuario,
             'errores' => $errores,
         ]);
     }

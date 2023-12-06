@@ -36,19 +36,8 @@
 </div>
 <main class="catalogo">
     <div class="contenedor">
-        <?php foreach ($proyectos as $proyecto) : ?>
-
-            <?php
-            $ingresoCorrespondiente;
-            foreach ($ingresos as $ingreso) {
-                if ($ingreso->idproyectos == $proyecto->id) {
-                    $ingresoCorrespondiente = $ingreso;
-                    break;
-                }
-            }
-            ?>
-
-            <a href="/Descripcion?id=<?php echo $ingresoCorrespondiente->id; ?>">
+    <?php foreach ($proyectos as $proyecto) : ?>
+            <a href="/Descripcion?id=<?php echo $proyecto->id; ?>">
                 <article class="card">
                     <div class="imagen">
                         <img src="/images/<?php echo $proyecto->portada; ?>">
@@ -56,7 +45,7 @@
                     <div class="info-proyecto">
                         <h2><?php echo $proyecto->nombre_proyecto; ?></h2>
                         <p><span class="backers"><?php echo $proyecto->num_backers; ?> </span><br>Backers</p>
-                        <p><span class="cifra">$<?php echo $ingresoCorrespondiente->ingresos; ?></span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
+                        <p><span class="cifra">$<?php echo $proyecto->ingresos; ?></span><br>De $<?php echo $proyecto->total_a_financiar; ?></p>
                     </div>
                 </article>
             </a>

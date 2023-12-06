@@ -55,6 +55,7 @@ class Sesion extends ActiveRecord {
             session_start();
         }
         //Llenar arreglo de sesion:
+        $_SESSION['id'] = $this->id;
         $_SESSION['usuario'] = $this->email;
         $_SESSION['login'] = true;
         
