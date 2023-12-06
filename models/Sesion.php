@@ -4,14 +4,11 @@ namespace Model;
 
 class Sesion extends ActiveRecord {
     protected static $tabla = 'usuarios';
-    protected static $columnasDB =['id','nombre','password', 'email', 'telefono', 'crowdfunder'];
+    protected static $columnasDB =['id','password', 'email'];
 
     public $id;
-    public $nombre;
     public $password;
     public $email;
-    public $telefono;
-    public $crowdfunder;
     
     /**
      * @param args representa un arreglo 
@@ -19,11 +16,8 @@ class Sesion extends ActiveRecord {
     function __construct($args = []) {
 
         $this->id = $args['id'] ?? null;
-        $this->nombre = $args['nombre'] ?? '';
         $this->password = $args['password'] ?? '';
         $this->email = $args['email'] ?? '';
-        $this->telefono = $args['telefono'] ?? '';
-        $this->crowdfunder = $args['crowdfunder'] ?? false; 
 
     }
 
@@ -76,7 +70,7 @@ class Sesion extends ActiveRecord {
             self::$errores[] = "Debes añadir una contraseña";
         }  
         if(!$this->email) {
-            self::$errores[] = "Debes añadir tu email.";
+            self::$errores[] = "Debes añadir tu email";
         }  
  
         return self::$errores;

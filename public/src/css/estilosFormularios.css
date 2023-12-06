@@ -5,6 +5,8 @@
     --azulOscuro: #0023ae;
     --azulClaro: #3d5eea;
     --morado: #c2aeff;
+    --rojo:#D03A53;
+    --aprobado: #00D812;
 }
 
 html {
@@ -444,6 +446,37 @@ input[type="submit"]:hover {
 .cerrar a:hover {
     text-decoration: underline;
 }
+
+/*  
+    Estilos para mensajes de alerta
+*/
+
+/* .contenedor-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.alerta {
+    font-family:'Courier New', Courier, monospace;
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 1rem 6rem;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.error {
+    background-color: var(--azulClaro);
+}
+
+.exito {
+    background-color: var(--aprobado);
+}
+
 
 /* 
     Media Queries
