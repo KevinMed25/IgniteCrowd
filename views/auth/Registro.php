@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regístrarse</title>
-    <link rel="stylesheet" type="text/css" href="estilosFormularios.css">
-</head>
 
 <div class="contenedor">
     <div class="formulario-registro">
@@ -17,7 +9,7 @@
             </div>
         <?php endforeach; ?>
 
-        <form method="POST">
+        <form method="POST" action="/ValidarUsuario.php" id="formulario-registrarse" onsubmit="return validarUsuario()">
             <div class="nombre-usuario">
                 <input type="text" id="nombreUsuario" name="usuario[nombre]" required>
                 <label for="nombreUsuario">Nombre(s)</label>
@@ -57,4 +49,3 @@
         </form>
     </div>
 </div>
-</html>
