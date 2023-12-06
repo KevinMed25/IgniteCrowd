@@ -34,7 +34,8 @@ if ($result->num_rows > 0) {
 } else {
     $sql_insert = "INSERT INTO usuarios (nombre, apellido_paterno, apellido_materno, telefono, email, password) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt_insert = $conn->prepare($sql_insert);
-    $stmt_insert->bind_param("ssssss", $nombre, $apellido_paterno, $apellido_materno, $telefono, $email, $password);
+    $passwordHasheado =password_hash($password, PASSWORD_BCRYPT);
+    $stmt_insert->bind_param("ssssss", $nombre, $apellido_paterno, $apellido_materno, $telefono, $email, $passwordHasheado);
 
     if ($stmt_insert->execute()) {
 

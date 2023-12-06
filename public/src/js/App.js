@@ -23,6 +23,7 @@ function validarUsuario() {
                 alert('El usuario ya existe. Por favor, elija otro correo electrónico.');
             } else {
                 alert('Usuario validado con éxito. Puedes continuar con el registro.');
+                window.location.href = '/';
                 return false;
             }
         } else {

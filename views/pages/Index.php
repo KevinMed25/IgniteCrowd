@@ -1,7 +1,7 @@
 <div class="panel">
     <div class="sobre-nosotros">
         <h1 class="fondo">¿Quienes somos?</h1>
-        <p class="fondo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur corrupti ducimus illo saepe voluptates ut mollitia pariatur nesciunt veritatis nemo. Ipsa minus, aperiam eius nihil deserunt amet tempore id laboriosam?</p>
+        <p class="fondo">Somos un equipo de apasionados por la cultura y la creatividad que te acompañaremos en toda tu aventura. Con las mejores herramientas, el mayor ecosistema con mecenas entusiastas del crowdfunding y el porcentaje de éxito más alto del mundo! ¿A qué estás esperando?</p>
     </div>
 </div>
 <main class="catalogo">
