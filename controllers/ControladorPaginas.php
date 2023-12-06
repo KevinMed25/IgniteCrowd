@@ -15,8 +15,10 @@ class ControladorPaginas {
      *  Renderiza y envia  a la pagina principal los datos que requiere
      */
     public static function index(Router  $router) {
-        $proyectos = Proyecto::get(3);
-        $ingresos = Ingresos::get(3);
+        // $proyectos = Proyecto::get(3);
+        // $ingresos = Ingresos::get(3);
+        $proyectos = Proyecto::all();
+        $ingresos = Ingresos::all();
         $router -> render('pages/Index', [
             'proyectos' => $proyectos,
             'ingresos' => $ingresos,
