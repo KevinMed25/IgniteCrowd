@@ -38,7 +38,7 @@ class ActiveRecord {
         $resultado = self::$baseDeDatos->query($query);
 
         if($resultado) {
-            header('Location: /admin?resultado=1');
+            header('Location: /');
         }
     }
     
@@ -55,7 +55,7 @@ class ActiveRecord {
         $query .= " LIMIT 1";            
         $resultado = self::$baseDeDatos->query($query);
         if($resultado) {
-            header('Location: /admin?resultado=2');
+            header('Location: /');
         }
     }
 
@@ -64,7 +64,7 @@ class ActiveRecord {
         $resultado = self::$baseDeDatos->query($query);
         if($resultado) {
             $this -> borrarImagen();
-            header('Location: /admin?resultado=3');
+            header('Location: /');
         }
     }
 
@@ -105,15 +105,15 @@ class ActiveRecord {
         }
 
         if($imagen) {
-            $this->imagen = $imagen;
+            $this->portada = $imagen;
         }
     }
 
     public function borrarImagen() {
    
-        $existeArchivo = file_exists(CARPETA_IMAGENES.$this->imagen);
+        $existeArchivo = file_exists(CARPETA_IMAGENES.$this->portada);
         if ($existeArchivo) {
-            unlink(CARPETA_IMAGENES.$this->imagen);
+            unlink(CARPETA_IMAGENES.$this->portada);
         }  
     }
 

@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace Controllers;
 
@@ -7,14 +7,42 @@ use Intervention\Image\ImageManagerStatic as Image;
 use Model\Proyecto;
 use Model\Usuario;
 
-class ControladorProyectos {
-
+class ControladorRegistro {
+    
     /**
      * @param $router representa una instancia del objeto Router para acceder a sus métodos
      * 
-     *  Renderiza la vista de crearProyecto
+     *  Se encarga de renderizar la vista Registro, y de registrar a un nuevo usuario
      */
-    public static function crearProyecto(Router $router) {
+    public static function crearUsuario(Router  $router) {
+        $isRegistro = true;
+
+        $errores = Usuario::getErrores();
+        $usuario = new Usuario();
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            
+            $usuario = new Usuario($_POST['usuario']);
+            $passwordHasheado =password_hash($usuario->password, PASSWORD_BCRYPT);
+            $usuario->password = $passwordHasheado;
+            // debug($usuario);
+            
+            $errores = $usuario->validar();
+    
+            if (empty($errores)) {
+                $usuario->guardar();
+            }
+        }
+
+        $router -> render('auth/Registro', [
+            'isRegistro' => $isRegistro,
+            'errores' => $errores,
+            'usuario' => $usuario,
+        ]);
+    }
+
+
+    public static function crearUsuarioxxsx(Router $router) {
 
         $proyecto = new Proyecto();
         $usuario = Usuario::all();
@@ -55,5 +83,6 @@ class ControladorProyectos {
         ]);
     }
 }
+
 
 ?>

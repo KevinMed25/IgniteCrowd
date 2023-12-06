@@ -48,12 +48,12 @@ class ControladorInicioSesion {
      * 
      *  Se encarga de renderizar la vista Registro
      */
-    public static function registro(Router  $router) {
-        $isRegistro = true;
-        $router -> render('auth/Registro', [
-            'isRegistro' => $isRegistro,
-        ]);
-    }
+    // public static function registro(Router  $router) {
+    //     $isRegistro = true;
+    //     $router -> render('auth/Registro', [
+    //         'isRegistro' => $isRegistro,
+    //     ]);
+    // }
 
     /**
      * @param $router representa una instancia del objeto Router para acceder a sus métodos

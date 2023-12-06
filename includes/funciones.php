@@ -2,7 +2,7 @@
 
 define('TEMPLATES_URL', __DIR__ . '/templates');
 define('FUNCIONES_URL', __DIR__ . 'funciones.php');
-define('CARPETA_IMAGENES', $_SERVER['DOCUMENT_ROOT'] . '/public/images/');
+define('CARPETA_IMAGENES', $_SERVER['DOCUMENT_ROOT'] . '/images/');
 
 /**
  * @param $nombre representa la ruta que se desea incluir

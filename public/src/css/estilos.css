@@ -5,6 +5,7 @@
     --azulOscuro: #0023ae;
     --azulClaro: #3d5eea;
     --morado: #c2aeff;
+    --aprobado: #00D812;
 }
 
 html {
@@ -656,6 +657,30 @@ input[type=tel]:hover, input[type=number]:hover{
 .campos-img {
     padding-top: 3rem;
 }
+
+/*  
+    Estilos para mensajes de alerta
+*/
+
+.alerta {
+    font-family:'Courier New', Courier, monospace;
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 1rem 20rem;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.error {
+    background-color: var(--azulClaro);
+}
+
+.exito {
+    background-color: var(--aprobado);
+}
+
 
 
 /* 

@@ -12,7 +12,7 @@
             session_start();
             $auth = $_SESSION['login'] ?? false;
 
-            $rutasProtegidas = [];
+            $rutasProtegidas = ['/CrearProyecto'];
 
             $urlAct = $_SERVER['PATH_INFO'] ?? '/';
             $metodo = $_SERVER['REQUEST_METHOD'];
@@ -20,6 +20,7 @@
             if ($metodo === 'GET') {
                 $fn = $this->rutasGET[$urlAct] ?? null;
             } else {
+                // debug($_POST);
                 $fn = $this->rutasPOST[$urlAct] ?? null;
             }
 

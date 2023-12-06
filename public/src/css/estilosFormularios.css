@@ -451,13 +451,6 @@ input[type="submit"]:hover {
     Estilos para mensajes de alerta
 */
 
-/* .contenedor-error {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 .alerta {
     font-family:'Courier New', Courier, monospace;
     padding: 1rem;

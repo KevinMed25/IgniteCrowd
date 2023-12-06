@@ -4,7 +4,7 @@ namespace Model;
 
 class Proyecto extends ActiveRecord {
     protected static $tabla = 'proyectos';
-    protected static $columnasDB =['id','nombre_proyecto','descripcion', 'total_a_financiar','num_backers', 'portada', 'img_descripcion', 'categoria', 'ciudad', 'fecha_creacion'];
+    protected static $columnasDB =['id','nombre_proyecto','descripcion', 'total_a_financiar','num_backers', 'portada', 'categoria', 'ciudad', 'fecha_creacion'];
 
     public $id;
     public $nombre_proyecto;
@@ -30,10 +30,10 @@ class Proyecto extends ActiveRecord {
         $this->total_a_financiar = $args['total_a_financiar'] ?? 0;
         $this->num_backers = $args['num_backers'] ?? 0;
         $this->portada = $args['portada'] ?? '';
-        $this->img_descripcion = $args['img_descripcion'] ?? '';
+        // $this->img_descripcion = $args['img_descripcion'] ?? '';
         $this->categoria = $args['categoria'] ?? '';
         $this->ciudad = $args['ciudad'] ?? '';
-        $this->fecha_creacion = $args['fecha_creacion'] ?? '';
+        $this->fecha_creacion = date('Y/m/d');;
 
     }
 
@@ -59,9 +59,9 @@ class Proyecto extends ActiveRecord {
             self::$errores[] = "La portada es obligatoria";
         }
 
-        if(!$this->img_descripcion) {
-            self::$errores[] = "La imagen de la descripción es obligatoria";
-        }
+        // if(!$this->img_descripcion) {
+        //     self::$errores[] = "La imagen de la descripción es obligatoria";
+        // }
 
         if(!$this->categoria) {
             self::$errores[] = "La categoría es obligatoria";
