@@ -4,10 +4,12 @@ namespace Model;
 
 class Usuario extends ActiveRecord {
     protected static $tabla = 'usuarios';
-    protected static $columnasDB =['id','nombre','password', 'email', 'telefono', 'crowdfunder'];
+    protected static $columnasDB =['id','nombre', 'apellido_paterno', 'apellido_materno', 'password', 'email', 'telefono', 'crowdfunder'];
 
     public $id;
     public $nombre;
+    public $apellido_paterno;
+    public $apellido_materno;
     public $password;
     public $email;
     public $telefono;
@@ -20,6 +22,8 @@ class Usuario extends ActiveRecord {
         
         $this->id = $args['id'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
+        $this->apellido_paterno = $args['apellido_paterno'] ?? '';
+        $this->apellido_materno = $args['apellido_materno'] ?? '';
         $this->password = $args['password'] ?? '';
         $this->email = $args['email'] ?? '';
         $this->telefono = $args['telefono'] ?? '';
@@ -33,16 +37,22 @@ class Usuario extends ActiveRecord {
     public function validar() {
           
         if(!$this->nombre) {
-            self::$errores[] = "Debes añadir tu nombre.";
+            self::$errores[] = "Debes añadir tu nombre";
+        }
+        if(!$this->apellido_paterno) {
+            self::$errores[] = "Debes añadir tu apellido paterno";
         }   
-        if(!$this->password) {
-            self::$errores[] = "Debes añadir una contraseña";
-        }  
+        if(!$this->apellido_materno) {
+            self::$errores[] = "Debes añadir tu apellido materno";
+        }      
+        // if(!$this->password) {
+        //     self::$errores[] = "Debes añadir una contraseña";
+        // }  
         if(!$this->email) {
-            self::$errores[] = "Debes añadir tu email.";
+            self::$errores[] = "Debes añadir tu email";
         }  
         if(!$this->telefono) {
-            self::$errores[] = "Debes añadir tu teléfono.";
+            self::$errores[] = "Debes añadir tu teléfono";
         }  
         return self::$errores;
     }

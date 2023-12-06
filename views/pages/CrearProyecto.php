@@ -3,43 +3,44 @@
         <h1>Cuéntanos tu proyecto</h1>
     </div>
 
+    <?php foreach ($errores as $error) : ?>
+        <div class="alerta error">
+            <?php echo $error; ?>
+        </div>
+    <?php endforeach; ?>
+
     <form method="POST" class="formulario">
         <fieldset>
             <legend>Información Personal</legend>
             <h2>Información básica</h2>
-            <label for="nombreUsuario">Nombre(s)</label>
-            <input type="text" name="nombreUsuario" placeholder="Escribe tu nombre" id="usuario">
+            <label for="nombre">Nombre(s)</label>
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" id="usuario">
 
-            <label for="apellidoPaterno">Apellido Paterno</label>
-            <input type="text" name="apellidoPaterno" placeholder="Escribe..." id="primerApellido">
+            <label for="apellido_paterno">Apellido Paterno</label>
+            <input type="text" name="apellido_paterno" placeholder="Escribe..." id="primerApellido">
 
-            <label for="apellidoMaterno">Apellido Materno</label>
-            <input type="text" name="apellidoMaterno" placeholder="Escribe..." id="segundoApellido">
+            <label for="apellido_materno">Apellido Materno</label>
+            <input type="text" name="apellido_materno" placeholder="Escribe..." id="segundoApellido">
 
-            <label for="tel">Teléfono</label>
-            <input type="tel" placeholder="Escribe tu teléfono" id="tel">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="telefono" placeholder="Escribe tu teléfono" id="telefono">
 
             <label for="email">Email</label>
-            <input type="email" placeholder="Escribe tu email" id="email">
-
-
+            <input type="email" name="email" placeholder="Escribe tu email" id="email">
         </fieldset>
 
         <fieldset>
             <legend>Tu Proyecto</legend>
             <h2>Datos del proyecto</h2>
 
-            <label for="proyecto">Título del proyecto</label>
-            <input type="text" id="proyecto" placeholder="Escribe...">
+            <label for="nombre_proyecto">Título del proyecto</label>
+            <input type="text" id="nombre_proyecto" placeholder="Escribe...">
 
-            <label for="decrip">Descripción</label>
-            <textarea placeholder="Escribe..." id="descrip"></textarea>
-
-            <label for="objetivo">Objetivo de financiación</label>
-            <textarea placeholder="Escribe..." id="objetivo"></textarea>
+            <label for="descripcion">Descripción</label>
+            <textarea placeholder="Escribe..." id="descripcion"></textarea>
 
             <label for="financiacion">Meta de financiación</label>
-            <input type="number" id="financiacion" placeholder="Escribe...">
+            <input type="number" name="total_a_financiar" id="financiacion" placeholder="Escribe...">
 
             <label for="categoria">Categoría</label>
             <div class="selector-categoria">
